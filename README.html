@@ -1,0 +1,4048 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Lenovo\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="跨体系结构的-benchmark-性能对比分析">跨体系结构的 benchmark 性能对比分析 </h1>
+
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#跨体系结构的-benchmark-性能对比分析" class="md-toc-link"><p>跨体系结构的 benchmark 性能对比分析</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#参赛信息" class="md-toc-link">
+            <p>参赛信息</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#1目标描述" class="md-toc-link"><p>1.目标描述</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#11-调研" class="md-toc-link">
+            <p>1.1. 调研</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-性能测试与数据处理" class="md-toc-link">
+            <p>1.2. 性能测试与数据处理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#13-实现-ris-function-level-topdown-分析工具" class="md-toc-link">
+            <p>1.3. 实现 RIS: Function-level Topdown 分析工具</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#2比赛题目分析和相关资料调研" class="md-toc-link"><p>2.比赛题目分析和相关资料调研</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#21-项目描述" class="md-toc-link">
+            <p>2.1. 项目描述</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#22-相关资料调研" class="md-toc-link"><p>2.2. 相关资料调研</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#221-topdown" class="md-toc-link"><p>2.2.1. topdown</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-背景" class="md-toc-link">
+            <p>A. 背景</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#b-cpu-架构分析" class="md-toc-link"><p>B. CPU 架构分析</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-inte-coffee-lake-的微架构图分析" class="md-toc-link">
+            <p>a. Inte Coffee Lake 的微架构图分析</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-微架构图简化版" class="md-toc-link">
+            <p>b. 微架构图简化版</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#c-topdown-分析" class="md-toc-link"><p>C. topdown 分析</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-顶层划分" class="md-toc-link">
+            <p>a. 顶层划分</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-前端限制-frontend-bound" class="md-toc-link">
+            <p>b. 前端限制 Frontend Bound</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-错误预测-bad-speculation-category" class="md-toc-link">
+            <p>c. 错误预测 Bad Speculation category</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#d-正常退出流水线退休retiring-category" class="md-toc-link">
+            <p>d. 正常退出流水线（退休）Retiring category</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#e-后端限制-backend-bound-category" class="md-toc-link">
+            <p>e. 后端限制 Backend Bound category</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#f-领头负载模型-leading-loads-model" class="md-toc-link">
+            <p>f. 领头负载模型 leading loads model</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#222-perf" class="md-toc-link"><p>2.2.2. perf</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-常见用法" class="md-toc-link">
+            <p>A. 常见用法</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-软硬件事件-events" class="md-toc-link">
+            <p>B. 软硬件事件 Events</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#c-使用-perf-stat-计数couting-with-perf-stat" class="md-toc-link"><p>C. 使用 perf stat 计数（Couting with perf stat）</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-多路复用和缩放-multiplexing-and-scaling-events" class="md-toc-link">
+            <p>a. 多路复用和缩放 multiplexing and scaling events</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-重复测量-repeated-measurement" class="md-toc-link">
+            <p>b. 重复测量 repeated measurement</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-控制环境选择的选项" class="md-toc-link">
+            <p>c. 控制环境选择的选项</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#d-使用-perf-record-采样sampling-with-perf-record" class="md-toc-link"><p>D. 使用 perf record 采样（Sampling with perf record）</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-基于事件的采样event-based-sampling-overview" class="md-toc-link">
+            <p>a. 基于事件的采样（Event-based sampling overview）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-采样周期和采样频率period-and-rate" class="md-toc-link">
+            <p>b. 采样周期和采样频率（period and rate）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-样本收集collecting-samples" class="md-toc-link">
+            <p>c. 样本收集（collecting samples）</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#e-查看汇编级别的指令百分比-perf-annotate" class="md-toc-link">
+            <p>E. 查看汇编级别的指令百分比 perf annotate</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#223-unixbench" class="md-toc-link"><p>2.2.3. UnixBench</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-download" class="md-toc-link">
+            <p>A. Download</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#b-unixbench-组成" class="md-toc-link"><p>B. UnixBench 组成</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-dhrystone" class="md-toc-link">
+            <p>a. Dhrystone</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-whetstone-double" class="md-toc-link">
+            <p>b. whetstone-double</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-execl-throughput" class="md-toc-link">
+            <p>c. Execl Throughput</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#d-file-copy" class="md-toc-link">
+            <p>d. File Copy</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#e-pipe-throughput" class="md-toc-link">
+            <p>e. Pipe Throughput</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#f-pipe-based-context-switching" class="md-toc-link">
+            <p>f. Pipe-based Context Switching</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#g-process-creation" class="md-toc-link">
+            <p>g. Process Creation</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#h-system-call-overhead" class="md-toc-link">
+            <p>h. System Call Overhead</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#i-graphical-tests" class="md-toc-link">
+            <p>i. Graphical Tests</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#224-flamegraph" class="md-toc-link"><p>2.2.4. Flamegraph</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-特征" class="md-toc-link">
+            <p>A. 特征</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-颜色" class="md-toc-link">
+            <p>B. 颜色</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-交互性" class="md-toc-link">
+            <p>C. 交互性</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#3开发计划" class="md-toc-link">
+            <p>3.开发计划</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#4ris-实现报告" class="md-toc-link"><p>4.RIS 实现报告</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#41实验概述" class="md-toc-link">
+            <p>4.1.实验概述</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#42系统目的" class="md-toc-link">
+            <p>4.2.系统目的</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#43系统实现的先验知识" class="md-toc-link"><p>4.3.系统实现的先验知识</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#431采样" class="md-toc-link">
+            <p>4.3.1.采样</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#432调研-amd-topdown-计算公式" class="md-toc-link">
+            <p>4.3.2.调研 AMD topdown 计算公式</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#433调研-amd-计算公式需要的-event-名称" class="md-toc-link">
+            <p>4.3.3.调研 AMD 计算公式需要的 event 名称</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#444获取程序的-perfunfold-数据" class="md-toc-link">
+            <p>4.4.4.获取程序的 perf.unfold 数据</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#45实验环境" class="md-toc-link">
+            <p>4.5.实验环境</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#46系统设计" class="md-toc-link"><p>4.6.系统设计</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#461系统整体设计" class="md-toc-link">
+            <p>4.6.1.系统整体设计</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#462-perf-解析器" class="md-toc-link"><p>4.6.2. perf 解析器</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#a-perfunfold-文件说明" class="md-toc-link"><p>A. perf.unfold 文件说明</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-count-和-event" class="md-toc-link">
+            <p>a. count 和 event</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-调用栈信息" class="md-toc-link">
+            <p>b. 调用栈信息</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-数据结构设计" class="md-toc-link">
+            <p>B. 数据结构设计</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#463调用树生成器" class="md-toc-link"><p>4.6.3.调用树生成器</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-调用栈与树结构" class="md-toc-link">
+            <p>A. 调用栈与树结构</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-数据结构设计-1" class="md-toc-link">
+            <p>B. 数据结构设计</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#464函数节点的统计" class="md-toc-link"><p>4.6.4.函数节点的统计</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-不同路径的同一函数" class="md-toc-link">
+            <p>A. 不同路径的同一函数</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#b-数据结构设计-2" class="md-toc-link"><p>B. 数据结构设计</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-total-计数和-self-计数" class="md-toc-link">
+            <p>a. total 计数和 self 计数</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#465服务器终端展示" class="md-toc-link">
+            <p>4.6.5.服务器终端展示</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#47系统实现" class="md-toc-link"><p>4.7.系统实现</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#471-perf-解析器" class="md-toc-link"><p>4.7.1. perf 解析器</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-func-importfromlinuxperffile-string-perfevent" class="md-toc-link">
+            <p>A. func importFromLinuxPerf(file string) []PerfEvent</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-func-parseeventsfilecontent-string-perfevent" class="md-toc-link">
+            <p>B. func parseEvents(Filecontent []string) PerfEvent</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#472-调用树生成器" class="md-toc-link"><p>4.7.2. 调用树生成器</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-func-rt-calltree-buildtreeeventlist-perfevent" class="md-toc-link">
+            <p>A. func (rt *CallTree) BuildTree(eventList []PerfEvent)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-func-rt-calltree-rootnodes_handler-calltreenode" class="md-toc-link">
+            <p>B. func (rt *CallTree) RootNodes_Handler(...) *CallTreeNode</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-func-rt-calltree-nodes_handler" class="md-toc-link">
+            <p>C. func (rt *CallTree) Nodes_Handler(...)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#473-函数节点的统计" class="md-toc-link"><p>4.7.3. 函数节点的统计</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#a-函数统计-total-计数" class="md-toc-link"><p>A. 函数统计 total 计数</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-func-fl-funclist-addfunclisteventlist-perfevent" class="md-toc-link">
+            <p>a. func (fl *FuncList) AddFuncList(eventList []PerfEvent)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-func-fl-funclist-addstackstack_levels-tmp_count-tmp_eventtpye" class="md-toc-link">
+            <p>b. func (fl *FuncList) AddStack(stack_levels, tmp_count, tmp_eventTpye)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#b-self-计数" class="md-toc-link"><p>B. self 计数</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-func-fl-funclist-get_selfct-calltree" class="md-toc-link">
+            <p>a. func (fl *FuncList) Get_self(cT CallTree)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-func-fl-funclist-iter_get_selfctnode-calltreenode-string" class="md-toc-link">
+            <p>b. func (fl *FuncList) iter_get_self(cTnode CallTreeNode) string</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-func-fl-funclist-add_selfctnode-calltreenode" class="md-toc-link">
+            <p>c. func (fl *FuncList) Add_self(cTnode CallTreeNode)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#c-topdown-计算" class="md-toc-link"><p>C. topdown 计算</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-func-fl-funclist-computetopdown" class="md-toc-link">
+            <p>a. func (fl *FuncList) ComputeTopdown()</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#474-服务器终端展示" class="md-toc-link">
+            <p>4.7.4. 服务器终端展示</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#48-系统验证" class="md-toc-link"><p>4.8. 系统验证</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#481调用栈生成树的验证" class="md-toc-link"><p>4.8.1.调用栈生成树的验证</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-根节点的生成的验证" class="md-toc-link">
+            <p>A. 根节点的生成的验证</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-子节点的验证" class="md-toc-link">
+            <p>B. 子节点的验证</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#482-函数节点统计的验证" class="md-toc-link">
+            <p>4.8.2. 函数节点统计的验证</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#483-终端-ui-的验证" class="md-toc-link">
+            <p>4.8.3. 终端 UI 的验证</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#5比赛过程中的重要进展" class="md-toc-link"><p>5.比赛过程中的重要进展</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#51初赛阶段" class="md-toc-link">
+            <p>5.1.初赛阶段</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#52决赛一阶段" class="md-toc-link">
+            <p>5.2.决赛一阶段</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#6g7a-与-g8a-性能比较结果" class="md-toc-link"><p>6.g7a 与 g8a 性能比较结果</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#61-unixbench-总测试结果" class="md-toc-link"><p>6.1. UnixBench 总测试结果</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#611-g7a-的-unixbench-总体跑分-26113" class="md-toc-link">
+            <p>6.1.1. g7a 的 UnixBench 总体跑分 2611.3</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#612-g8a-的-unixbench-总体跑分-32072" class="md-toc-link">
+            <p>6.1.2. g8a 的 UnixBench 总体跑分 3207.2</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#62-perf-记录-unixbench-单项测试结果" class="md-toc-link">
+            <p>6.2. perf 记录 UnixBench 单项测试结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#63-falmegraph-可视化unixbench-单项测试结果" class="md-toc-link">
+            <p>6.3. FalmeGraph 可视化UnixBench 单项测试结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#64-topdown-分析结果" class="md-toc-link">
+            <p>6.4. Topdown 分析结果</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#65-数据处理与分析" class="md-toc-link"><p>6.5. 数据处理与分析</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#651dhrystone" class="md-toc-link"><p>6.5.1.Dhrystone</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#a-dhry2reg" class="md-toc-link"><p>A. dhry2reg</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果" class="md-toc-link">
+            <p>a. 跑分结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-flamegraph-的热点函数" class="md-toc-link">
+            <p>b. FlameGraph 的热点函数</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#b-dhry2" class="md-toc-link"><p>B. dhry2</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-1" class="md-toc-link">
+            <p>a. 跑分结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-flamegraph-的热点函数-1" class="md-toc-link">
+            <p>b. FlameGraph 的热点函数</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#652-whetstone-double" class="md-toc-link"><p>6.5.2. whetstone-double</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-2" class="md-toc-link">
+            <p>A. 跑分结果</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#653-file-copy" class="md-toc-link"><p>6.5.3. File Copy</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-3" class="md-toc-link">
+            <p>A. 跑分结果</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#654-pipe-throughput" class="md-toc-link">
+            <p>6.5.4. Pipe Throughput</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#655pipe-based-context-switching" class="md-toc-link"><p>6.5.5.Pipe-based Context Switching</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-4" class="md-toc-link">
+            <p>A. 跑分结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-flamegrpah-的热点函数" class="md-toc-link">
+            <p>B. FlameGrpah 的热点函数</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#656-process-creation" class="md-toc-link"><p>6.5.6. Process Creation</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-5" class="md-toc-link">
+            <p>A. 跑分结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-flamegraph-的热点函数-2" class="md-toc-link">
+            <p>B. FlameGraph 的热点函数</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#657-system-call-overhead" class="md-toc-link"><p>6.5.7. System Call Overhead</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#a-mix" class="md-toc-link"><p>A. mix</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-6" class="md-toc-link">
+            <p>a. 跑分结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-flamegraph-的热点函数-3" class="md-toc-link">
+            <p>b. FlameGraph 的热点函数</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#b-close" class="md-toc-link"><p>B. close</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-7" class="md-toc-link">
+            <p>a. 跑分结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-flamegraph-的热点函数-4" class="md-toc-link">
+            <p>b. FlameGraph 的热点函数</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#c-getpid" class="md-toc-link"><p>C. getpid</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-8" class="md-toc-link">
+            <p>a. 跑分结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-flamegraph-的热点函数-5" class="md-toc-link">
+            <p>b. FlameGraph 的热点函数</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#c-exec" class="md-toc-link"><p>C. exec</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-跑分结果-9" class="md-toc-link">
+            <p>a. 跑分结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-flamegraph-的热点函数-6" class="md-toc-link">
+            <p>b. FlameGraph 的热点函数</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#66-使用-ris-工具分析比较" class="md-toc-link">
+            <p>6.6. 使用 RIS 工具分析比较</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#7遇到的主要问题和分析方法" class="md-toc-link"><p>7.遇到的主要问题和分析方法</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#71-调研中的问题" class="md-toc-link"><p>7.1. 调研中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#711-问题对-topdown-进行调研时顶层分类方法很难理解" class="md-toc-link">
+            <p>7.1.1. 问题：对 topdown 进行调研时，顶层分类方法很难理解</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#712-问题对-perf-调研时采样和计数模式的工作原理以及进程切换-中断对他们的影响" class="md-toc-link">
+            <p>7.1.2. 问题：对 perf 调研时，采样和计数模式的工作原理以及进程切换、中断对他们的影响</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#72-unixbench-测试中的问题" class="md-toc-link"><p>7.2. Unixbench 测试中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#721-问题在进行-unixbench-测试时不熟悉单项测试如何进行" class="md-toc-link">
+            <p>7.2.1. 问题：在进行 UnixBench 测试时，不熟悉单项测试如何进行</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#722-问题在测试-context1-时遇到了单-cpu-和多-cpu-测试结果不同的情况" class="md-toc-link">
+            <p>7.2.2. 问题：在测试 context1 时，遇到了单 cpu 和多 cpu 测试结果不同的情况</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#73-数据处理分析中的问题" class="md-toc-link"><p>7.3. 数据处理分析中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#731-问题在用-perf-记录-flamegraph-可视化之后不知道如何进行下一步分析" class="md-toc-link">
+            <p>7.3.1. 问题：在用 perf 记录、FlameGraph 可视化之后，不知道如何进行下一步分析</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#74-调研-amd-topdown-计算公式中的问题" class="md-toc-link"><p>7.4. 调研 AMD topdown 计算公式中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#741-g7a-系列不能正确的采集到需要的事件" class="md-toc-link">
+            <p>7.4.1. g7a 系列不能正确的采集到需要的事件</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#75-perf解析器中的问题" class="md-toc-link"><p>7.5. perf解析器中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#751-字符串处理的方式选择问题" class="md-toc-link">
+            <p>7.5.1. 字符串处理的方式选择问题</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#752-在-perf-解析器运行时程序会报内存访问错误的-error" class="md-toc-link">
+            <p>7.5.2. 在 perf 解析器运行时，程序会报内存访问错误的 ERROR</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#753-在输出-calltreenode-时发现相同的函数没有合并" class="md-toc-link">
+            <p>7.5.3. 在输出 CallTreeNode 时，发现相同的函数没有合并</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#754-由于文件部分行格式错误导致的最终结果有细微偏差" class="md-toc-link">
+            <p>7.5.4. 由于文件部分行格式错误导致的最终结果有细微偏差</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#76-调用树生成器中的问题" class="md-toc-link"><p>7.6. 调用树生成器中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#761-多个文件下的运行命令" class="md-toc-link">
+            <p>7.6.1. 多个文件下的运行命令</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#762-递归构造与引用传递" class="md-toc-link">
+            <p>7.6.2. 递归构造与引用传递</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#77-函数节点的统计中的问题" class="md-toc-link"><p>7.7. 函数节点的统计中的问题</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#771-total-计数中的问题" class="md-toc-link"><p>7.7.1. total 计数中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-funclist-出现重复的同名节点问题" class="md-toc-link">
+            <p>A. funclist 出现重复的同名节点问题</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-同一调用栈存在的函数同名问题" class="md-toc-link">
+            <p>B. 同一调用栈存在的函数同名问题</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#772-self-计数中的问题" class="md-toc-link"><p>7.7.2. self 计数中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-遍历树节点计算-self-时修改了树结点的内容" class="md-toc-link">
+            <p>A. 遍历树节点计算 self 时修改了树结点的内容</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#b-add_self-函数添加逻辑错误" class="md-toc-link">
+            <p>B. Add_self 函数添加逻辑错误</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#773-topdown-计算中的问题" class="md-toc-link"><p>7.7.3. topdown 计算中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-存在负数以及和不为-1-的情况" class="md-toc-link">
+            <p>A. 存在负数以及和不为 1 的情况</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#774-cycles-验证中的问题" class="md-toc-link"><p>7.7.4. cycles 验证中的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#a-总-cycles-计算公式出错导致验证结果差别很大" class="md-toc-link">
+            <p>A. 总 cycles 计算公式出错导致验证结果差别很大</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#8分工与协作" class="md-toc-link">
+            <p>8.分工与协作</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#9提交仓库目录和文件描述" class="md-toc-link">
+            <p>9.提交仓库目录和文件描述</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#10比赛收获" class="md-toc-link">
+            <p>10.比赛收获</p>
+
+          </a></div>
+</div>
+<h2 id="参赛信息">参赛信息 </h2>
+<p>2024年全国大学生计算机系统能力大赛—操作系统设计赛（全国）—OS功能挑战赛道</p>
+<ul>
+<li>项 目 编 号： proj244</li>
+<li>题 目：跨体系结构的 benchmark 性能对比分析</li>
+<li>参 赛 队 伍 编 号 ：	T202410487992574</li>
+<li>参   赛   队  员 ：	董 菁(队长)、石月鑫</li>
+<li>参 赛 队 伍 学 校 ：	华中科技大学</li>
+<li>指   导   老   师 ：	常怀鑫(阿里)</li>
+</ul>
+<h1 id="1目标描述">1.目标描述 </h1>
+<h2 id="11-调研">1.1. 调研 </h2>
+<ul>
+<li>
+<p>对 on-CPU 分析方法进行调研，选择合适的性能分析工具和基准测试。</p>
+</li>
+<li>
+<p>选择服务器 Aliyun ECS 的两个实例（ g7a 和 g8a 通用实例）。</p>
+</li>
+</ul>
+<h2 id="12-性能测试与数据处理">1.2. 性能测试与数据处理 </h2>
+<ul>
+<li>对 g7a 和 g8a 进行<strong>基于 UnixBench 的性能测试</strong>，得到总体测试结果和单项测试结果</li>
+<li>用 <strong>perf</strong> 工具对 UnixBench 单项测试进行性能记录</li>
+<li>用 <strong>FlameGraph</strong> 可视化 UnixBench 单项测试的调用栈和 CPU 时间占比</li>
+<li>在 perf 的基础上用 <strong>topdown</strong> 分析方法分析 UnixBench 单项测试</li>
+<li>根据 perf 的性能记录和 Falmegraph 的调用栈信息，<strong>计算得到性能数据并分析</strong></li>
+</ul>
+<h2 id="13-实现-ris-function-level-topdown-分析工具">1.3. 实现 RIS: Function-level Topdown 分析工具 </h2>
+<p><strong>RIS (Rat in Stack) 作为 Function-level Topdown 分析工具</strong></p>
+<ul>
+<li>调研出适合 AMD 的 topdown 计算公式</li>
+<li>收集某个进程需要的 perf 性能数据</li>
+<li>实现对 perf 性能数据的处理，完成对调用栈的建树</li>
+<li>在调用栈的数据结构上计算函数级别的 topdown 四大类 Frontend Bound、Backend Bound、Retiring、Bad Speculation 指令占比</li>
+<li>将结果输出在终端</li>
+</ul>
+<h1 id="2比赛题目分析和相关资料调研">2.比赛题目分析和相关资料调研 </h1>
+<h2 id="21-项目描述">2.1. 项目描述 </h2>
+<p>随着软硬件技术的不断发展，操作系统性能也不断提升。在享受新的软硬件发布带来的性能红利的同时，这些性能提升背后的原因也很有价值，它为性能优化提供了潜在机遇。<strong>由于不同软硬件平台的巨大差异，性能对比分析非常困难。</strong></p>
+<p>实践里常用的方法是从具体的 benchmark 出发，分析 benchmark 的测试内容、运行模型和平均，并且在不同环境上进行深入对比。这些对比分析里差异提供了潜在的优化机遇。</p>
+<p>我们从 Aliyun ECS 选择了 2 个不同体系结构的实例（g7a和g8a 通用型实例），使用 Alibaba Cloud Linux 操作系统，<strong>选择常用操作系统 benchmark——UnixBench  进行性能测试</strong>，<strong>结合 perf、FlameGraph 工具和 Topdown 方法进行性能分析</strong>。 <strong>并实现一个工具(Function-level topdown)达到函数级别的topdown分析。</strong></p>
+<h2 id="22-相关资料调研">2.2. 相关资料调研 </h2>
+<h3 id="221-topdown">2.2.1. topdown </h3>
+<p>topdown 分析是一种 on-CPU 的性能分析方法，基于现代乱序多路 cpu 的指令流水线提出的 cpu 性能分析方法。</p>
+<h4 id="a-背景">A. 背景 </h4>
+<p>现代的 CPU 为了能够尽可能的提高 <strong>IPC</strong> (Instruction Per Cycle) ，采取了诸多技术：</p>
+<ul>
+<li>乱序执行</li>
+<li>分支预测</li>
+<li>超标量</li>
+<li>硬件预取</li>
+</ul>
+<p>这些技术非常好的提高了 CPU 的理论上限，但是也增加了分析微架构数据的难度。</p>
+<h4 id="b-cpu-架构分析">B. CPU 架构分析 </h4>
+<h5 id="a-inte-coffee-lake-的微架构图分析">a. Inte Coffee Lake 的微架构图分析 </h5>
+<p>下图是一个 Intel Coffee Lake 的微架构图，分为黄色的 <strong>Front End</strong> ，绿色的 <strong>Execution Engine</strong> ，紫色的 <strong>Memory Subsystem</strong> 。</p>
+<p>黄色的 Front End 包含<strong>指令预取 Instruction Cache Tag</strong>，<strong>指令解码 4-Way Decode</strong>，<strong>分支预取 Brach Predictor</strong>。</p>
+<p>绿色的 Execution Engine 包含<strong>指令调度Scheduler</strong>和<strong>8个端口</strong>以及若干计算单元，8 个端口包含计算端口如 Prot 0，1，5，6，7 和访存端口如 Port2，3，4 。</p>
+<p>紫色的 Memory Subsystem 则包含 <strong>L1 和 L2两级 Cache</strong> 。</p>
+<center>
+    <img src="image\IntelCoffeeLake.png" alt="IntelCoffeeLake">
+</center>
+<h5 id="b-微架构图简化版">b. 微架构图简化版 </h5>
+<p>上图中的黄色部分 Front End 构成了 topdown 分析中的 <strong>Front end of processor pipeline</strong> ，绿色 Execution Engine 和紫色的 Memory Subsystem 构成了 topdown 分析中的 <strong>Back end of processor pipeline</strong> 。</p>
+<p>图中箭头则说明了流水线工作的顺序，先进行 1：指令预取和指令解码，再进行 2：指令调度，之后对于存取指令来说进行访存，即箭头 3，对于计算指令来说，计算结束正常退出流水线，即箭头 4。</p>
+<center>
+    <img src="image\simple_frame.png" alt="simple_frame">
+</center>
+<h4 id="c-topdown-分析">C. topdown 分析 </h4>
+<h5 id="a-顶层划分">a. 顶层划分 </h5>
+<p>Top-Down方法按照如下的方式对微指令做划分：</p>
+<center>
+    <img src="image\top_slip.png" alt="/image/top_slip.png">
+</center>
+<p>对于一个已经被发射的微指令，那么它最终只有两个结果：Retired 或者 Cancelled 。</p>
+<p>因此，这条指令要么被计入到 Retiring 阶段或者 Bad Speculation 阶段。</p>
+<p>反过来，对于一个还没有分配的微指令，如果出现了 Backend Stall ，后端由于一些原因无法处理相关的指令，则计入到 Backend Bound ；反之则将其计入到 Frontend Bound 。</p>
+<p>下图是 <strong>AMD</strong> 的 Topdown 树：</p>
+<center>
+    <img src="image\AMD-Topdown.png" alt="/image/AMD-Topdown.png">
+</center>
+<p>下图是 <strong>Intel</strong> 的 Topdown 树：</p>
+<center>
+    <img src="image\Intel-Topdown.png" alt="/image/Intel-Topdown.png">
+</center>
+<p>可以看到 Intel 的 topdown 树层次更深，分类更细，这是由 Intel 的硬件结构决定的</p>
+<h5 id="b-前端限制-frontend-bound">b. 前端限制 Frontend Bound </h5>
+<p>前端主要承担以下工作：</p>
+<ul>
+<li>基于分支预测取出下一条地址</li>
+<li>取出 cache line 解析指令</li>
+<li>将指令解析成微指令</li>
+</ul>
+<p>当没有指令从前端传递到后端时，这样的循环被标记为 <strong>Frontend Bound</strong> 。理想前端每个周期可以发出 4 个微操作。此类未使用的插槽示例是由于指令缓存未命中 <strong>instruction cache misses</strong> 而导致的停顿。</p>
+<blockquote>
+<p>对于 AMD 处理器，Frontend Bound 类别最准确的等效项是 <strong>DECODER_EMPTY</strong> 性能计数器。需要注意的是 DECODER_EMPTY 不考虑后端是否停止。</p>
+<p>这是连接前端和后端的单元。当它为空时，意味着进程的执行受到前端的限制——这些可能是等待错过指令高速缓存的指令获取的周期。</p>
+<p>对于 Intel 处理器，用于计算 Frontend Bound 类别的 IDQ_UOPS_NOT_DELIVERED 性能计数器在机器后端未停止时在内部仅计算从前端到资源分配表的未交付 UOPS 数量。因此，不需要其他数学运算</p>
+</blockquote>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">performance counter</th>
+<th style="text-align:center">difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Intel</td>
+<td style="text-align:center">IDQ_UOPS_NOT_DELIVERED</td>
+<td style="text-align:center">仅在后端未停止时计算从前端到资源分配表的未交付 UOPS 数量</td>
+</tr>
+<tr>
+<td style="text-align:center">AMD</td>
+<td style="text-align:center">DECODER_EMPTY</td>
+<td style="text-align:center">不考虑后端是否停止</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>前端绑定类别进一步分为<strong>指令缓存未命中Instruction Cache Misses</strong>和<strong>指令转换后备缓冲区未命中Instruction Translation Lookaside Buffer(ITLB) Misses</strong>。</p>
+<p>这两个中的第一个计算指令缓存中未完成的请求数。这些可以通过使用性能计数器来定义 <strong>INSTRUCTION_FETCH_STALL</strong> 。它有效地计算了指令获取器为内核停止的周期数。</p>
+<p>AMD处理器只计算 ITLB 未命中的次数，而不是丢失的周期数,<strong>未命中的固定成本定义为 7 个周期的值</strong>。</p>
+<p>此成本稍后乘以 L1_ITLB_MISS_AND_L2_ITLB_MISS 的两个性能计数器的数量。</p>
+</blockquote>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Frontend Bound</th>
+<th style="text-align:center">performance counter</th>
+<th style="text-align:center">stall reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Instruction Cache Misses</td>
+<td style="text-align:center">DECODER_EMPTY</td>
+<td style="text-align:center">指令缓存未完成</td>
+</tr>
+<tr>
+<td style="text-align:center">Instruction Translation Lookaside Buffer(ITLB) Misses</td>
+<td style="text-align:center">L1_ITLB_MISS_AND_L2_ITLB_MISS</td>
+<td style="text-align:center">指令转换后备缓冲区未命中（请求的地址不在 TLB 中，查找页表继续进行Page Walk）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="c-错误预测-bad-speculation-category">c. 错误预测 Bad Speculation category </h5>
+<p>Bad Speculation category 计算由于错误推测而丢失的槽数。这些主要是由错误预测的分支指令造成的。最初，该指标被定义为<strong>所有发出的微操作数量减去最终退出的微操作数量= Bad Speculation category</strong> 。</p>
+<p>AMD 仅提供有关事件数量的信息，而不提供有关事件使用的周期的信息，因此在此指标中还引入了这些事件的成本。这是继 <strong>ITLB 未命中</strong>之后的第二个指标，也是 AMD 自上而下表征中使用额外成本值的最后一个指标。该成本的具体值取决于给定的处理器，<strong>使用 12 个周期的值</strong>。然而，这两个指标的绝对值相对较低，因此固定成本带来的误差相对较低。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">performance counter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Intel</td>
+<td style="text-align:center">(UOPS_ISSUED.ANY − UOPS_RETIRED.RETIRE_SLOTS) + Pipeline_Width ∗INT_MISC.RECOVERY_CYCLES</td>
+</tr>
+<tr>
+<td style="text-align:center">AMD</td>
+<td style="text-align:center">AMD 公式考虑了管道的长度。这个数字近似于错误预测分支的整个执行的成本(RETIRED_MISPREDICTED_BRANCH_INSTRUCTIONS + RETIRED_TAKEN_BRANCH_INSTRUCTIONS_MISPREDICTED + RETIRED_INDIRECT_BRANCHES_MISPREDICTED) ∗ (Branch misprediction cost)/UNHALTED_REFERENCE_CYCLES</td>
+</tr>
+</tbody>
+</table>
+</div>
+<center>
+    <img src="image\AMD-Fixed-Cost.png" alt="/image/AMD-Fixed-Cost.png">
+</center>
+<h5 id="d-正常退出流水线退休retiring-category">d. 正常退出流水线（退休）Retiring category </h5>
+<p>对于 AMD 来说，正常退休的指令包含 x87、MMX、SSE、CLFLUSH、CPUID、Brach、Taken brach、Far control 七种指令，所以正常退休的指令数量是这七种指令正常退休的计数器之和。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">performance counter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Intel</td>
+<td style="text-align:center">UOPS_RETIRED.RETIRE_SLOTS</td>
+</tr>
+<tr>
+<td style="text-align:center">AMD</td>
+<td style="text-align:center">RETIRED UOPS</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="e-后端限制-backend-bound-category">e. 后端限制 Backend Bound category </h5>
+<p>指令从前端分配，后端负责监视微操作数据操作数何时可用，并在可用的执行单元中执行微操作。Backend Bound 反映了<strong>当后端耗尽某些资源，例如加载缓冲区</strong>时，在管道上未交付微操作的情况。</p>
+<p>Backend Bound 类别的计算方式为 100% 减去所有其他三个指标的总和，即层次结构的顶部。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Backend Bound</th>
+<th style="text-align:center">performance counter</th>
+<th style="text-align:center">stall reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Memory Bound</td>
+<td style="text-align:center"><strong>Intel</strong>：CYCLE_ACTIVITY.STALLS_LDM_PENDING <strong>AMD：未命中地址缓冲区 (MAB)：MAB_WAIT</strong></td>
+<td style="text-align:center">memory   subsystem：cache misses and memory accesses.</td>
+</tr>
+<tr>
+<td style="text-align:center">Core Bound</td>
+<td style="text-align:center">Backend Bound减去Memory Bound</td>
+<td style="text-align:center">non-optimal  use of the available execution units in the CPU in each cycle</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="f-领头负载模型-leading-loads-model">f. 领头负载模型 leading loads model </h5>
+<p>对所有内存访问进行计数并将其乘以某个预定义成本是不够的，因为处理器可以通过重叠多个缓存未命中来利用<strong>内存级并行性 (MLP)</strong>。最后，DRAM 访问延迟随访问模式的不同而变化，因此很难仅根据访问计数来预测等待内存所花费的时间。</p>
+<p>尽管许多内存访问可能未完成，但只有一个可以使管道停顿。因此，在核心高速缓存的最后一级中未命中的第一个非推测性负载被视为 <strong>leading loads</strong> 。内存时间计算为<strong>未命中和数据返回到处理器之间的时间</strong>。该负载返回之前的所有其他未命中都不是领先负载，因此会被忽略。</p>
+<center>
+    <img src="image\LeadingLoadModel.png" alt="/image/LeadingLoadModel.png">
+</center>
+<p>在 AMD 处理器上，引入了<strong>未命中地址缓冲区 (MAB)</strong>，它是一种跟踪未完成的高速缓存未命中的结构。每次缓存未命中时，都会使用其中一个条目来保存内存请求。</p>
+<p>当前未保存请求的最高优先级条目始终用于保存最新的内存请求。因此，具有最高优先级的条目保存有关领先内存请求的信息。此外，可以使用指定的硬件性能计数器 <strong>MAB_WAIT</strong> 直接测量每个条目在周期中占用的时间。</p>
+<center>
+    <img src="image\AMD-Topdown-Metrics.png" alt="/image/AMD-Topdown-Metrics.png">
+</center>
+<h3 id="222-perf">2.2.2. perf </h3>
+<p>perf 是 Linux 的官方剖析器，在 linux 内核源码中的 <code>tools/perf</code> 下，是一个集剖析、跟踪和脚本功能于一身的工具，是内核 perf_events 观测子系统的前端。perf_events 也被称为 Linux 的性能计数器（Performance Counter for Linux，PCL）或 Linux 性能事件（Linux Performance Event，LPE）。</p>
+<h4 id="a-常见用法">A. 常见用法 </h4>
+<ul>
+<li>
+<p><strong>性能计数器</strong> <strong>Performance Counter</strong> : 计数指定的事件类型（cycles、 instruction）</p>
+</li>
+<li>
+<p><strong>采样计数</strong> <strong>Event Sampling</strong> ：以一定的频率对指定的事件进行采样，获取事件发生时的上下文信息，以及调用链数据。这样可以较为准确地了解事件的发生频率、发生位置和调用链的关系，帮助分析程序的热点和性能瓶颈。</p>
+</li>
+<li>
+<p><strong>调用图</strong> <strong>Call Graph</strong> : perf 工具可以采集程序的调用链数据，生成函数调用关系图，展示函数之间的调用关系和调用次数。这对于分析程序的调用层次、函数之间的耗时以及优化热点函数等非常有用。</p>
+</li>
+<li>
+<p>结合<strong>火焰图</strong> <strong>Flame Graphs</strong>使用 :生成火焰图的工具通常包括 FlameGraph 和火焰图生成脚本。可以将 perf 工具的输出数据作为输入，然后使用火焰图工具生成具有层级结构的火焰图。</p>
+</li>
+</ul>
+<h4 id="b-软硬件事件-events">B. 软硬件事件 Events </h4>
+<center>
+    <img src="image\linux-perf-events.png" alt="/image/linux-perf-events.png">
+</center>
+<p>perf 工具和底层内核接口可以测量来自不同来源的事件。例如</p>
+<ul>
+<li><strong>硬件事件 Hardware Events</strong>：来源是<strong>处理器本身及其性能监控单元 （PMU）</strong>——CPU 性能监视计数器。它提供了一个事件列表来衡量微架构事件，例如周期数、停用的指令、L1 缓存未命中等。这些事件称为 <strong>PMU 硬件事件或简称为硬件事件</strong>。它们因每种处理器类型和型号而异。</li>
+<li><strong>软件事件 Software Events</strong>：这些是<strong>基于内核计数器</strong>的低级事件。例如，CPU 迁移、小故障、大故障等。</li>
+<li><strong>内核跟踪点事件 Kernel Tracepoint Events</strong>：这是静态内核级检测点，在内核中有趣的逻辑位置进行硬编码。</li>
+<li><strong>用户静态跟踪 User Statically-Defined Tracing (USDT)</strong>：这些是用户级进程和应用进程的静态跟踪点。</li>
+<li><strong>动态跟踪 Dynamic Tracing</strong>：可以动态检测软件，在任何位置创建事件。对于内核软件，这使用 kprobes 框架。对于用户级软件， uprobes 。</li>
+<li><strong>定时分析 Timed Profiling</strong>：可以使用 perf record -FHz 以任意频率收集快照。这通常用于 CPU 使用率分析，并通过创建自定义定时中断事件来工作。</li>
+</ul>
+<p>可以收集有关事件的详细信息，包括时间戳、导致事件的代码路径以及其他特定详细信息。perf_events 的功能是巨大的。要获取支持的事件列表，请执行以下操作：<code>perf list</code></p>
+<h4 id="c-使用-perf-stat-计数couting-with-perf-stat">C. 使用 perf stat 计数（Couting with perf stat） </h4>
+<p>对于任何受支持的事件，<strong>perf 可以在进程执行期间保留运行计数</strong>。在计数模式下，事件的发生只是<strong>聚合</strong>，并在应用进程运行结束时显示在标准输出上。要生成这些统计信息，请使用 perf 的 stat 命令。例如：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf stat -B dd if=/dev/zero of=/dev/null count=1000000
+1000000+0 records in
+1000000+0 records out
+512000000 bytes (512 MB, 488 MiB) copied, 0.231396 s, 2.2 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null count=1000000':
+
+            231.70 msec task-clock                #    0.996 CPUs utilized          
+                 1      context-switches          #    0.004 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                74      page-faults               #    0.319 K/sec                  
+   &lt;not supported&gt;      cycles                                                      
+   &lt;not supported&gt;      instructions                                                
+   &lt;not supported&gt;      branches                                                    
+   &lt;not supported&gt;      branch-misses                                               
+
+       0.232734970 seconds time elapsed
+
+       0.076870000 seconds user
+       0.154727000 seconds sys
+</code></pre><h5 id="a-多路复用和缩放-multiplexing-and-scaling-events">a. 多路复用和缩放 multiplexing and scaling events </h5>
+<p>如果事件多于计数器，内核使用时间多路复用（开关频率 = HZ，通常为 100 或 1000）为每个事件提供访问监视硬件的机会。多路复用仅适用于 PMU 事件。</p>
+<p>使用多路复用时，不会一直测量事件。在运行结束时，该工具会<strong>根据启用的总时间与运行时间来缩放计数</strong>。</p>
+<h5 id="b-重复测量-repeated-measurement">b. 重复测量 repeated measurement </h5>
+<p>可以使用 perf stat 多次运行相同的测试工作负载，并获取每次计数与均值的标准差。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf stat -r 5 sleep 1
+
+ Performance counter stats for 'sleep 1' (5 runs):
+
+    &lt;not counted&gt; cache-misses
+           20,676 cache-references         #     13.046 M/sec   ( +-   0.658% )
+            6,229 branch-misses            #      0.000 %       ( +-  40.825% )
+    &lt;not counted&gt; branches
+    &lt;not counted&gt; instructions
+    &lt;not counted&gt; cycles
+              144 page-faults              #      0.091 M/sec   ( +-   0.139% )
+                0 CPU-migrations           #      0.000 M/sec   ( +-    -nan% )
+                1 context-switches         #      0.001 M/sec   ( +-   0.000% )
+         1.584872 task-clock-msecs         #      0.002 CPUs    ( +-  12.480% )
+
+       1.002251432  seconds time elapsed   ( +-   0.025% )
+</code></pre><h5 id="c-控制环境选择的选项">c. 控制环境选择的选项 </h5>
+<p>perf 工具可用于对<strong>每个线程、每个进程、每个 CPU 或系统范围</strong>的事件进行计数。</p>
+<p>在每线程模式下，计数器仅监视指定线程的执行。当线程被调度出 cpu 时，监视将停止。当线程从一个 cpu 迁移到另一个 cpu 时，计数器将保存在当前处理器上，并在新处理器上还原。</p>
+<p>每进程模式是每线程模式的变体，<strong>其中进程的所有线程都受到监视</strong>。计数和样本在进程级别进行聚合。perf_events 接口允许在 fork（） 和 pthread_create（） 上自动继承。默认情况下，perf 工具会激活继承。</p>
+<blockquote>
+<p>默认情况下，进程的所有线程以及后续子进程和线程的 perf stat 计数。这可以使用 -i 选项进行更改。无法获取每个线程或每个进程的计数明细</p>
+</blockquote>
+<p>在每 CPU 模式下，将监视在指定处理器上运行的所有线程。因此，计数和样本是按 CPU 聚合的。一个事件一次只监视一个 CPU。若要跨多个处理器进行监视，必须创建多个事件。perf 工具可以聚合多个处理器的计数和样本。它还只能监视处理器的子集。</p>
+<blockquote>
+<p>默认情况下，perf stat 在每线程模式下计数。要按 CPU 计算计数，请传递 -a 选项。当它本身指定时，将监视所有在线处理器并汇总计数。<br>
+可以使用 -C 选项将监视限制在 CPU 的子集上。可以传递要监视的 CPU 列表。例如，要测量 CPU0、CPU2 和 CPU3：<br>
+perf stat -B -e cycles:u,instructions:u -a -C 0,2-3 sleep 5<br>
+perf stat -B -e cycles:u,instructions:u -a -C 1 sleep 5<br>
+计数将聚合所有受监视的 CPU。</p>
+</blockquote>
+<h4 id="d-使用-perf-record-采样sampling-with-perf-record">D. 使用 perf record 采样（Sampling with perf record） </h4>
+<p>必须首先使用 perf 记录收集样本。这将生成一个名为 perf.data 的输出文档。然后，可以使用 perf report 和 perf annotate 命令在另一台计算机上分析该文档。</p>
+<h5 id="a-基于事件的采样event-based-sampling-overview">a. 基于事件的采样（Event-based sampling overview） </h5>
+<p>Perf_events基于基于事件的抽样。<strong>周期表示为事件的出现次数</strong>，而不是计时器刻度的次数。当采样计数器溢出时，即从 2^64 换回 0，将记录一个样本。没有 PMU 实现 64 位硬件计数器，但perf_events软件中模拟此类计数器。</p>
+<p>perf_events 模拟 64 位计数器的方式仅限于使用实际硬件计数器中的位数来表示采样周期。如果小于 64，则在这种情况下，内核会静默地截断句点。因此，如果在 32 位系统上运行，则周期始终小于 2^31 是最好的。</p>
+<p><strong>在计数器溢出时，内核记录有关进程执行的信息</strong>，即样本。记录的内容取决于测量类型。这都是由用户和工具指定的。但是，所有样本中<strong>通用的关键信息是指令指针，即进程中断时的位置</strong>。</p>
+<h5 id="b-采样周期和采样频率period-and-rate">b. 采样周期和采样频率（period and rate） </h5>
+<p>perf_events 接口允许两种模式来表示采样周期：</p>
+<ul>
+<li><strong>事件的发生次数-周期</strong>： the number of occurrences of the event (period)</li>
+<li><strong>平均采样速率/秒-频率</strong>： the average rate of samples/sec (frequency)</li>
+</ul>
+<p><strong>性能工具默认为平均速率</strong> average rate。它设置为 1000Hz，或 1000 个样本/秒。这意味着内核正在动态调整采样周期 sampling period 以达到目标平均频率 the target average rate 。期间的调整在原始配置文档数据中报告。相比之下，在另一种模式下，采样周期 sampling period 由用户设置，并且在样本之间没有变化。目前不支持抽样期随机化。</p>
+<p>若要指<strong>定自定义频率，必须使用 -F 选项</strong>。例如，仅在用户级别对事件指令进行采样，并且平均频率 250:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf record -e instructions:u -F 250 ./noploop 4
+</code></pre><p>若要<strong>指定采样周期，必须使用 -c 选项</strong>。例如，仅在用户级别每 2000 次事件指令中收集一个样本：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf record -e retired_instructions:u -c 2000 ./noploop 4
+</code></pre><h5 id="c-样本收集collecting-samples">c. 样本收集（collecting samples） </h5>
+<p>默认情况下，perf record 在<strong>每线程 per-thread</strong>模式下运行，并启用继承模式。最简单的模式如下所示，当执行繁忙循环的简单进程时：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf record ./noploop 1
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0.058 MB perf.data (~2526 samples) ]
+</code></pre><p>上面的示例以 1000Hz 的平均目标速率收集事件周期的样本。生成的示例将保存到 perf.data 文档中。</p>
+<p><strong>报告的样本数量仅为估计值。它不反映实际收集的样本数量</strong>。估计值基于写入 perf.data 文档的字节数和最小样本大小。但每个样品的大小取决于测量类型。有些样本是由计数器本身生成的，但其他样本则被记录下来以支持后处理过程中的符号相关性，例如， mmap() 信息。</p>
+<p>若要获取 perf.data 文档的准确样本数，可以使用 <code>perf report</code> 命令：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf report -D -i perf.data | fgrep RECORD_SAMPLE | wc -l
+1280
+</code></pre><p>在<strong>每 CPU</strong> 模式模式下，将收集在受监视 CPU 上执行的所有线程的样本。要在每 CPU 模式下切换性能记录，必须使用 <code>-a</code> 选项。默认情况下，在此模式下，<strong>将监视所有在线 CPU</strong> 。可以使用 <code>-C</code> 选项限制为 CPU 的子集，如上面的 <code>perf stat</code> 所述。</p>
+<h4 id="e-查看汇编级别的指令百分比-perf-annotate">E. 查看汇编级别的指令百分比 perf annotate </h4>
+<p>可以使用 perf annotate <strong>向下钻取到指令级别</strong>。为此，您需要使用要注释的命令的名称调用 perf annotate。所有带有样本的函数都将被拆解，并且每条指令都将报告其样本的相对百分比：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf record ./noploop 5
+perf annotate -d ./noploop
+
+------------------------------------------------
+ Percent |   Source code &amp; Disassembly of noploop.noggdb
+------------------------------------------------
+         :
+         :
+         :
+         :   Disassembly of section .text:
+         :
+         :   08048484 &lt;main&gt;:
+    0.00 :    8048484:       55                      push   %ebp
+    0.00 :    8048485:       89 e5                   mov    %esp,%ebp
+[...]
+    0.00 :    8048530:       eb 0b                   jmp    804853d &lt;main+0xb9&gt;
+   15.08 :    8048532:       8b 44 24 2c             mov    0x2c(%esp),%eax
+    0.00 :    8048536:       83 c0 01                add    $0x1,%eax
+   14.52 :    8048539:       89 44 24 2c             mov    %eax,0x2c(%esp)
+   14.27 :    804853d:       8b 44 24 2c             mov    0x2c(%esp),%eax
+   56.13 :    8048541:       3d ff e0 f5 05          cmp    $0x5f5e0ff,%eax
+    0.00 :    8048546:       76 ea                   jbe    8048532 &lt;main+0xae&gt;
+[...]
+</code></pre><p>第一列报告在该指令中捕获的函数样本百分比。</p>
+<h3 id="223-unixbench">2.2.3. UnixBench </h3>
+<p>UnixBench 一个基于系统的基准测试工具，不单纯是 CPU 内存 或者磁盘测试工具。测试结果不仅仅取决于硬件，也取决于系统、开发库、甚至是编译器。</p>
+<h4 id="a-download">A. Download </h4>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>wget https://raw.githubusercontent.com/yunqikan/UnixBench/master/UnixBench-5.1.3.tar.gz
+tar -zxvf UnixBench-5.1.3.tar.gz
+cd UnixBench-5.1.3/UnixBench5.1.3
+make
+yum install perl-Time-HiRes
+./Run
+</code></pre><h4 id="b-unixbench-组成">B. UnixBench 组成 </h4>
+<p><code>./Run</code> 默认执行的是 Index 模块，它包含下面几个小程序：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>    "dhry2reg", "whetstone-double", "execl"，"fstime", "fsbuffer", 
+    "fsdisk", "pipe", "context1", "spawn", "shell1", "shell8","syscall"
+</code></pre><h5 id="a-dhrystone">a. Dhrystone </h5>
+<p>测试聚焦在字符串处理，没有浮点运算操作。这个测试用于测试链接器编译、代码优化、内存缓存、等待状态、整数数据类型等，硬件和软件设计都会非常大的影响测试结果。</p>
+<h5 id="b-whetstone-double">b. whetstone-double </h5>
+<p>这项测试项目用于测试浮点运算效率和速度。这项测试项目包含若干个科学计算的典型性能模块，包含大量的C语言函数, sin cos sqrt exp 和日志以及使用整数和浮点的数学操作。包含数组访问、条件分支和过程调用。</p>
+<h5 id="c-execl-throughput">c. Execl Throughput </h5>
+<p>execl 吞吐，这里的 execl 是类 unix 系统非常重要的函数，非办公软件的 execl</p>
+<p>这项测试测试每秒 execl 函数调用次数。 execl 是 exec 函数家族的一部分，使用新的图形处理代替当前的图形处理。有许多命令和前端的 execve() 函数命令非常相似。</p>
+<h5 id="d-file-copy">d. File Copy </h5>
+<p>这项测试衡量文件数据从一个文件被传输到另外一个，使用大量的缓存。包括文件的读、写、复制测试，测试指标是一定时间内（默认是 10 秒）被重写、读、复制的字符数量。</p>
+<p>这个测试项, 性能和具体存储设备无关, 底层的文件系统直接决定了测试结果。</p>
+<h5 id="e-pipe-throughput">e. Pipe Throughput </h5>
+<p>pipe 是简单的进程之间的通讯。管道吞吐测试是测试在一秒钟一个进程写 512 比特到一个管道中并且读回来的次数。管道吞吐测试和实际编程有差距。</p>
+<h5 id="f-pipe-based-context-switching">f. Pipe-based Context Switching </h5>
+<p>这项测试衡量两个进程通过管道交换和整数倍的增加吞吐的次数。基于管道的上下文切换和真实程序很类似。测试程序产生一个双向管道通讯的子线程。</p>
+<p>测试原理是首先创建一个管道，然后使用 fork 函数创建一个子进程，两个进程通过这个管道互相发送一个数字，其初始值为 0 ，每次发送的一方要将这个数字加一。设定时间到了后，通过一个 <code>SIGALRM</code> 信号进入结束函数，将结果输出，使用 <code>exit(0)</code> 关闭程序。</p>
+<h5 id="g-process-creation">g. Process Creation </h5>
+<p>shell 脚本测试用于衡量在一分钟内，一个进程可以启动并停止 shell 脚本的次数，通常会测试 1，2，3，4，8 个 shell 脚本的共同拷贝， shell 脚本是一套转化数据文件的脚本。</p>
+<h5 id="h-system-call-overhead">h. System Call Overhead </h5>
+<p>这项测试衡量进入和离开系统内核的消耗，例如，系统调用的消耗。<br>
+消耗的指标是调用进入和离开内核的执行时间。</p>
+<h5 id="i-graphical-tests">i. Graphical Tests </h5>
+<p>由 "ubgears" 程序组成，测试非常粗的 2D 和 3D 图形性能，尤其是 3D 测试非常有限。测试结果和硬件，系统合适的驱动关系很大。</p>
+<h3 id="224-flamegraph">2.2.4. Flamegraph </h3>
+<p><strong>剖析栈踪迹</strong>是一种有效解释 CPU 用量的方式，揭示了哪个内核态或者哪个用户态代码路径是罪魁祸首。然而它也会生成数以千页计的输出。</p>
+<p><strong>火焰图可视化了栈帧的剖析信息</strong>，这样可以更快更清楚地理解 CPU 用量。</p>
+<p>火焰图可以从任何包含栈踪迹的 CPU 剖析文件中构建，包括 perf、profile、bpftrace 等剖析文件。火焰图也可以可视化除 CPU 剖析之外的剖析文件。</p>
+<p>下图是一个火焰图的例子：</p>
+<center>
+    <img src="image\eg-FlameGraph.png" alt="/image/eg-FlameGraph.png">
+</center>
+<h4 id="a-特征">A. 特征 </h4>
+<ul>
+<li>每个框代表栈里的一个函数（一个“栈帧”）。</li>
+<li>Y 轴表示栈的深度（栈上的帧数）。顶部的框表示在 CPU 上执行的函数，下面的是它的祖先调用者。函数下面的函数即其父函数，正如前面展示过的栈回溯。</li>
+<li>X 轴横跨整个采样数据。它并不像大多数图那样，从左到右表示时间的流逝，其左右顺序没有任何含义（按字母排序）。</li>
+<li>框的宽度表示函数在 CPU 上运行，或者是它的上级函数在 CPU 上运行的时间（基于采样计数）。宽框的函数可能比窄框的函数慢，也可能是因为只是很频繁地被调用。不显示调用计数（通过采样也不可能知道）。</li>
+</ul>
+<p>如果是多线程在运行，而且采样是并发的情况，采样计数可能会超过总时间。</p>
+<h4 id="b-颜色">B. 颜色 </h4>
+<p>栈帧可以根据不同的方案着色。默认方案是给每个栈帧涂上随机的暖色，这有助于在视觉上区分相邻的塔。</p>
+<ul>
+<li><strong>色调</strong>：色调表示代码类型。例如，<strong>红色表示原生用户级代码</strong>，<strong>橙色表示原生内核级代码</strong>、<strong>黄色表示 C++ 代码</strong>、<strong>绿色表示解释函数</strong>，<strong>水蓝色表示内联函数</strong>，等等，具体取决于你使用的语言。品红色用于突出搜索匹配。有的开发者定制了火焰图，总是用某种色调来突出自己的代码，这样就会很显眼。</li>
+<li><strong>饱和度</strong>：饱和度是从函数名哈希出来的。它造成了色觉差异，有助于区分相邻的塔，同时为名称相同的函数保留了相同的颜色，以便更容易比较多张火焰图。</li>
+<li><strong>背景色</strong>：背景色提供了火焰图类型的视觉提醒。例如，你可以在CPU火焰图中使用黄色，对不在 CPU 执行或者 I/O 火焰图使用蓝色，而对内存火焰图使用绿色。</li>
+</ul>
+<h4 id="c-交互性">C. 交互性 </h4>
+<p>火焰图是交互式的。当在浏览器里打开时，可以将鼠标光标放在元素上，以在底部显示细节和其他交互功能。</p>
+<p>可以通过点击鼠标来对图进行缩放，按 Ctrl+F 来搜索一个关键词。当搜索时，还将显示一个累积百分比，以表明包含该搜索关键词的栈踪迹出现的频率。这使得计算剖析在特定代码区域中的比例变得很简单。例如，可以搜索 “tcp_” 来显示在内核 TCP 代码的比例有多少。</p>
+<h1 id="3开发计划">3.开发计划 </h1>
+<center>
+    <img src="image\plan.png" alt="plan">
+</center>
+<h1 id="4ris-实现报告">4.RIS 实现报告 </h1>
+<h2 id="41实验概述">4.1.实验概述 </h2>
+<p>在对 topdown 的调研中，发现计算 topdown 需要知晓对应事件的内核计数器，并按照正确的公式，才能得到指令流水线中的 Frontend Bound、Backend Bound、Retiring、Bad Speculation 四类指令的占比。</p>
+<p>针对不同的机型，会有不同的 topdown 公式，但是公式之间的区别不会很大。对于 Intel 来说，可查找到的资料较多，但是 AMD 的计算公式，由于硬件配置与 Intel 有区别，所以对应事件的内核计数器也会略有区别，虽然 topdown 公式的思想是不同机型间通用的，但是 AMD 公式不能直接套用 Intel 的，需要经过调研、实践，找到适应 g7a 和 g8a 实例的 topdown 计算公式。</p>
+<p>在确定 AMD 计算 topdown 的公式后，便同时确定了需要 perf 采样的事件 Events ，用 <code>perf record -e &lt;events&gt;</code> 对某一进程进行采样，得到 <code>perf.data</code> 。</p>
+<p>用<code>perf script</code>解析 <code>perf.data</code> 文件得到 <code>perf.unfold</code> 文件。</p>
+<p>在 Function-level topdown 工具中，处理输入的 <code>perf.unfold</code> 文件，获取每个采样点的调用栈信息和计数器信息，此处的计数器信息是当前采样点和上一个采样点之间计数器的增量。</p>
+<center>
+    <img src="image\system-outline.png" alt="/image/system-outline.png">
+</center>
+<p>根据调用栈信息得到类似火焰图的多叉树，再根据多叉树和事件列表计算每个函数的 topdown 四大顶类占比结果，最终在终端输出结果。</p>
+<h2 id="42系统目的">4.2.系统目的 </h2>
+<p>现有的 perf 工具可以做到对系统范围、 CPU 级、进程级、线程级做到性能记录。同时 <code>perf record</code> 采样后的结果经过 <code>perf report</code> 的处理可以达到汇编指令级的 cpu 占比，经过 <code>perf script</code> 配合 <code>FlameGraph</code> 处理可以得到调用栈和函数级的 cpu 占比信息。但是 <code>perf stat</code> 只能做到进程级、线程级的统计，这受限于 <code>perf stat</code> 的工作原理。</p>
+<p>但不管是采样还是统计，如果要配合 topdown ，却只能做到进程级的 topdown 分析，而在本次实践中发现进程级别的 topdown 难以满足热点分析的需求，热点函数的性能问题依旧难以定位，这时，如果有<strong>函数级别的 topdown 分析方法</strong>，就可以准确定位热点函数的性能瓶颈处于指令流水线的什么位置，对于指导 CPU 性能提升具有重要意义。</p>
+<h2 id="43系统实现的先验知识">4.3.系统实现的先验知识 </h2>
+<h3 id="431采样">4.3.1.采样 </h3>
+<p>在此详细解释采样点和采样计数器，并与统计方式进行区别。</p>
+<p>采样会以一定频率记录调用栈信息和计数器信息，并最终合并调用栈得到一个函数调用栈的多叉树，同时相同栈的相同函数累和所有的计数器信息。最终通过 <code>report</code> 输出。</p>
+<p>而统计会在进程开始时记录事件计数器的信息，然后在进程结束后再次记录事件计数器信息，他们的差值就是统计得到的事件计数器结果。这也是为什么采样的系统功耗比统计高。</p>
+<center>
+    <img src="image\sampling.png" alt="/image/sampling.png">
+</center>
+<p>上图简单展示了 perf 采样运行中进程的调用栈信息和事件计数器信息。</p>
+<p>A、B、C 是一个进程的三个函数， A 在运行过程中调用了 B ，B 调用了 C ，C 触发了系统调用，系统调用结束后，C 继续运行直至结束，B 运行结束，A运行结束。</p>
+<p>perf 工具只针对 CPU 进行，对于不在 CPU 上运行的事件不做记录。</p>
+<p>上一步得到的调用栈信息可以看作不同的树，这一步对相似调用栈的树进行合并，同时累和相同的函数的计数器信息，以便计算函数级别的 topdown 。</p>
+<p>最终在命令行输出结果，输出形式参考 <code>perf report</code> 的结果。</p>
+<h3 id="432调研-amd-topdown-计算公式">4.3.2.调研 AMD topdown 计算公式 </h3>
+<p>根据 <a href="function-level-topdown.md">function-level-topdown.md</a> 中调研的结果，现在将 AMD topdown 计算公式简略表达如下：</p>
+<center>
+    <img src="image-exp\exp-amdtopdown.png" alt="amdtopdown">
+</center>
+<h3 id="433调研-amd-计算公式需要的-event-名称">4.3.3.调研 AMD 计算公式需要的 event 名称 </h3>
+<p>根据 <a href="function-level-topdown.md">function-level-topdown.md</a> 中调研的结果，现在将 topdown 计算需要的事件统计如下：</p>
+<center>
+    <img src="image-exp\exp-event.png" alt="event">
+</center>
+<h3 id="444获取程序的-perfunfold-数据">4.4.4.获取程序的 perf.unfold 数据 </h3>
+<p>先采用 <code>perf record</code> 采样，再用 <code>perf script</code> 把 <code>perf.data</code> 解析成 <code>perf.unfold</code> ，作为函数级别 topdown 的输入。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf record -e cycles,r430076,r1004301A0,r4307AA,r4300C1,r100431EA0,r1004360A0,r4300C1  -g taskset -c 0 ./pgms/spawn 5
+perf script -i perf.data &amp;&gt; perf.unfold
+</code></pre><h2 id="45实验环境">4.5.实验环境 </h2>
+<p>在 Aliyun ECS 选择了 g8a 裸金属环境作为运行函数级别 topdown 的环境，开发语言使用 golang ，终端 UI 使用 <code>goncurses</code> 库实现。</p>
+<p>go 语言版本</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>go1.22.5linux-amd64
+</code></pre><h2 id="46系统设计">4.6.系统设计 </h2>
+<h3 id="461系统整体设计">4.6.1.系统整体设计 </h3>
+<p>系统为实现函数级别的 topdown 计算，分为以下几个部分。</p>
+<p>第一个是 <strong>perf 解析器</strong>，图中<strong>紫色</strong>框图部分，负责将 <code>perf.unfold</code> 文件中的数万条记录解析成为 <code>PerfEvent[]</code> 数组，保存事件计数和调用栈信息。</p>
+<p>其次是<strong>调用树生成器</strong>，图中<strong>绿色</strong>框图部分，负责根据 <code>PerfEvent[]</code> 数组构建调用栈的树结构。保存调用栈信息和事件计数。</p>
+<p>还有<strong>函数节点统计</strong>，图中<strong>蓝色</strong>部分，负责根据 <code>PerfEvent[]</code> 数组统计函数级别的事件计数的累和，得到所有函数的 total 计数。并且需要遍历调用树，通过父节点减去所有子节点的计数方式计算父节点的 self 计数，保存在 <code>FuncList</code> 中。</p>
+<p>之后，<code>FuncList</code> 根据所有得到的数据开始计算 topdown 信息。</p>
+<p>最后，将计算的结果展示在服务器终端。</p>
+<center>
+    <img src="image-exp\exp-sys.png" alt="system">
+</center>
+<h3 id="462-perf-解析器">4.6.2. perf 解析器 </h3>
+<h4 id="a-perfunfold-文件说明">A. perf.unfold 文件说明 </h4>
+<p>系统首先需要处理 <code>perf.unfold</code> 文件，这个文件由 <code>perf script</code> 解析 <code>perf report</code> 生成的 <code>perf.data</code> 文件生成。</p>
+<p><code>perf script</code> 目的是将人不可读的 <code>perf.data</code> 转变成人可读且便于文本处理的 <code>perf.unfold</code> 。</p>
+<p><code>perf.unfold</code> 文件形式如下图所示，图中所示仅为 <code>perf.unfold</code> 的一个记录， <code>perf.unfold</code> 往往由数万如图的记录组成。</p>
+<center>
+    <img src="image-exp\exp-perf_event.png" alt="perf_event 解构">
+</center>
+<h5 id="a-count-和-event">a. count 和 event </h5>
+<p>如图所示，一条记录的第一行为：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>spawn 1521032 5450156.000474:     594257     cycles: 
+</code></pre><p>其中 <code>spawn</code> 为 <code>command</code> ,代表此次 perf 监视的程序，此次 <code>perf.unfold</code> 文件便是来源于命令：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf record -e cycles -g taskset -c 0 ./pgms/spawn 5
+</code></pre><p>perf 监视的便是 <code>./pgms/spawn</code> 5s 中的系统调用和事件计数。</p>
+<p>command 后面跟着的是进程 <code>processID:1521032</code> ，随后是线程  <code>threadID:5450156</code> ，时间戳 <code>timestamp:000474</code> 。</p>
+<p>第一行最后两个是很重要的记录，分别是本次记录的事件 <code>event:cycles</code> 和本次事件距上次事件记录之间的事件统计计数 <code>count:594257</code> 。</p>
+<h5 id="b-调用栈信息">b. 调用栈信息 </h5>
+<p>除了第一行外，剩下的都是调用栈信息，单看一行：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>ffffffff81c00099 entry_SYSCALL_64_after_hwframe+0x61 ([kernel.kallsyms])
+</code></pre><p><code>ffffffff81c00099</code> 是内存地址 <code>address</code>，<code>entry_SYSCALL_64_after_hwframe</code> 是 <code>symbolname</code> ，是 perf 记录里的 symbol ，也是本系统要实现的函数级别的topdown的函数对象。 <code>0x61</code> 是偏移，并不是重要信息。 <code>([kernel.kallsyms])</code> 则是 symbol 的 file 路径信息，该标志说明此函数为内核函数，用户态函数的 file 路径形如 <code>(/usr/lib64/libc-2.32.so)</code>。</p>
+<p>从整体来看，用户态的函数 <code>__libc_fork</code> 本次调用栈的根节点，它调用了内涵函数 <code>entry_SYSCALL_64_after_hwframe</code> ，之后一直向上调用，直到 <code>perf_event_groups_insert</code> ，调用栈结束。可见，调用是自底向上的，最下面的是根节点，每一层都是其上一层的父节点。</p>
+<h4 id="b-数据结构设计">B. 数据结构设计 </h4>
+<p>初步设计该记录的数据结构， <code>PerfEvent</code> 用来表示 <code>perf.unfold</code> 的一个记录，存储第一行的事件和计数信息还有调用栈信息，调用栈用 <code>PerfStackFrame[]</code> 数组表示,数组可以保存调用顺序。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>type PerfStackFrame struct {
+	address    string  //ffffffff81c00099
+	symbolName string  //entry_SYSCALL_64_after_hwframe
+	file       string  //([kernel.kallsyms])
+}
+type PerfEvent struct {
+	command   string  //spawn
+	processID string  //1521032
+	threadID  string  //5450156
+	time      int64   //000474
+	count     int64   //594257
+	eventType string  //cycles
+	stack     []PerfStackFrame
+}
+</code></pre><h3 id="463调用树生成器">4.6.3.调用树生成器 </h3>
+<h4 id="a-调用栈与树结构">A. 调用栈与树结构 </h4>
+<p>对于一个 N 层调用栈来说，可以把它看作一个 N 层的树，树的根节点就是最底下的函数，每一层都是其上一层的父节点。</p>
+<p>对于事件和计数来说，同一个调用栈的事件和计数是相同的，也就是说，本次记录的事件类型和计数对调用栈上的所有函数生效。</p>
+<p>在不同的记录上，如果调用栈函数有重叠，那它们的树可以合并。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>spawn 1484315 5264831.011521:     757651    r430076: 
+	ffffffff81adcd21 exc_page_fault+0x11 ([kernel.kallsyms])
+	ffffffff81c00afe asm_exc_page_fault+0x1e ([kernel.kallsyms])
+	          401131 main+0x81 (/root/UnixBench-5.1.3/UnixBench5.1.3/pgms/spawn)
+
+spawn 1484653 5264831.861054:     794383     cycles: 
+	ffffffff812f64e6 handle_mm_fault+0x66 ([kernel.kallsyms])
+	ffffffff81070ab4 do_user_addr_fault+0x184 ([kernel.kallsyms])
+	ffffffff81adcd78 exc_page_fault+0x68 ([kernel.kallsyms])
+	ffffffff81c00afe asm_exc_page_fault+0x1e ([kernel.kallsyms])
+	          401131 main+0x81 (/root/UnixBench-5.1.3/UnixBench5.1.3/pgms/spawn)
+</code></pre><p>这是两个记录，可以看到一个记录的事件类型为 <code>r430076</code> ，计数为 <code>757651</code> ，一个记录事件类型为 <code>cycles</code> ，计数为 <code>794383</code> 。</p>
+<p>在对记录进行解析后，我们只显示了重要的信息，如下图 <code>PerfEvent</code> 所示。</p>
+<p>在转化为树结构时，每个节点(函数)都会保存此次事件和计数，正如下图 <code>CalltreeNode</code> 中所示。</p>
+<p>两个 <code>CalltreeNode</code> 有重合的地方，可以进行合并，合并的同时，事件和计数也需要合并。</p>
+<p>需要注意的是，<strong>相同的事件类型，其计数需要累和</strong>。</p>
+<center>
+    <img src="image-exp\exp-calltree.png" alt="calltree" 合并"="">
+</center>
+<h4 id="b-数据结构设计-1">B. 数据结构设计 </h4>
+<p>初步设计调用树的数据结构， <code>CallTreeNode</code> 用来表示函数节点和事件计数信息，包含函数信息 <code>funcInfo</code> 、事件计数 <code>map[string](int64)</code> 、子节点列表 <code>[]CallTreeNode</code> , <code>CallTree</code> 用来表示本次 perf 记录的完整树，记录所有的根节点函数。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>type funcInfo struct {
+	symbolName string
+	file       string
+}
+type CallTreeNode struct {
+	info     funcInfo
+	ev_count map[string](int64) //total
+	Children []CallTreeNode     //子节点列表
+
+}
+type CallTree struct { //root
+	root     bool
+	Children []CallTreeNode	    //根节点列表
+}
+
+</code></pre><h3 id="464函数节点的统计">4.6.4.函数节点的统计 </h3>
+<h4 id="a-不同路径的同一函数">A. 不同路径的同一函数 </h4>
+<p>在经过perf解析器和调用树生成器后，我们可以得到一个存储了所有记录的 <code>PerfEvent[]</code> 数组和一个多叉树 <code>CallTree</code>。</p>
+<p>每一个函数的调用路径在多叉树中都有迹可寻，但是想象一下，对于同一个函数来说，它可能具有不同的调用轨迹，那么它在树中，便有不同的路径和不同的事件计数。用函数 <code>entry_SYSCALL_64_after_hwframe</code> 举例，可以看到他在不同的调用栈里有不同的路径，路径的根节点不相同，所以他们的计数不会合并。</p>
+<p>函数 <code>entry_SYSCALL_64_after_hwframe</code> 在不同的调用栈：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>taskset 1521032 5450155.119134:    2057073 r1004301A0: 
+	ffffffff81397a75 __x64_sys_access+0x5 ([kernel.kallsyms])
+	ffffffff81ad99e3 do_syscall_64+0x33 ([kernel.kallsyms])
+	ffffffff81c00099 entry_SYSCALL_64_after_hwframe+0x61 ([kernel.kallsyms])
+	    7fd63b7a7d2b access+0xb (/usr/lib64/ld-2.32.so)
+	    7fd63b7a5792 _dl_sysdep_start+0x5f2 (/usr/lib64/ld-2.32.so)
+	41e589480000a7b4 [unknown] ([unknown])
+
+taskset 1521032 5450155.119242:     386910    r4300C1: 
+	ffffffff8127f032 __perf_addr_filters_adjust+0x2 ([kernel.kallsyms])
+	ffffffff8128081a perf_iterate_ctx+0x5a ([kernel.kallsyms])
+	ffffffff8128f14f perf_event_mmap+0x8f ([kernel.kallsyms])
+	ffffffff812fdce9 mmap_region+0x189 ([kernel.kallsyms])
+	ffffffff812fe6b0 do_mmap+0x430 ([kernel.kallsyms])
+	ffffffff812d1893 vm_mmap_pgoff+0xb3 ([kernel.kallsyms])
+	ffffffff812fcda4 ksys_mmap_pgoff+0x1b4 ([kernel.kallsyms])
+	ffffffff81ad99e3 do_syscall_64+0x33 ([kernel.kallsyms])
+	ffffffff81c00099 entry_SYSCALL_64_after_hwframe+0x61 ([kernel.kallsyms])
+	    7fd63b7a80b6 mmap64+0x26 (/usr/lib64/ld-2.32.so)
+</code></pre><p>函数 <code>entry_SYSCALL_64_after_hwframe</code> 具有不同的调用路径(另一种表达形式)：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>[unknown](r1004301A0,2057073)
+  |__ dl_sysdep_start(r1004301A0,2057073)
+	   |_ access(r1004301A0,2057073)
+	       |_ entry_SYSCALL_64_after_hwframe(r1004301A0,2057073)
+		       |_ do_syscall_64(r1004301A0,2057073)
+			       |_ __x64_sys_access(r1004301A0,2057073)
+mmap64(r4300C1,386910)
+  |_ entry_SYSCALL_64_after_hwframe(r4300C1,386910)
+      |_ do_syscall_64(r4300C1,386910)
+	      |_ ksys_mmap_pgoff(r4300C1,386910)
+		      |_ vm_mmap_pgoff(r4300C1,386910)
+			       |_ do_mmap(r4300C1,386910)
+				        |_ mmap_region(r4300C1,386910)
+						     |_ perf_event_mmap(r4300C1,386910)
+							      |_ perf_iterate_ctx(r4300C1,386910)
+								       |_ __perf_addr_filters_adjust(r4300C1,386910)
+</code></pre><p>但是对于同一个函数来说，其所有的记录是需要合并的，因为目标是做出函数级别的 topdown 分析，那信息存储也应该做到函数级别的粒度，调用树因为要保存调用路径的信息，所以不能满足这个需求，需要另外设计一个结构来做函数节点的统计。</p>
+<p>下图展示了不同路径的同一函数应该实现怎样的合并。</p>
+<p>记录 1 中的函数在 FuncList 的前六个 FuncListNode 中保存着，在图中为紫色和红色，紫色部分是仅在记录 1 中出现的函数和事件计数，红色部分则包含着记录 2 中同名函数的事件计数。</p>
+<p>记录 2 的函数在 FuncList 剩下的部分，由绿色和红色表示(图中并未完全展示记录 2 的函数)，绿色是仅在记录2中出现的函数，红色则是在记录 1 的基础上添加了记录 2 的事件计数信息。</p>
+<center>
+    <img src="image-exp\exp-funclist.png" alt="funclist" 合并"="">
+</center>
+<h4 id="b-数据结构设计-2">B. 数据结构设计 </h4>
+<p>初步设计函数统计的数据结构， <code>FuncListNode</code> 用来表示函数节点和事件计数信息，包含函数名称 <code>symbolName</code> 、事件计数 <code>ev_count map[string](int64)</code> 。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>type FuncList struct {
+	list     bool
+	ListNode []FuncListNode //函数的全局统计，唯一性
+}
+type FuncListNode struct {
+	symbolName    string
+	file          string
+	ev_count      map[string](int64)
+}
+</code></pre><h5 id="a-total-计数和-self-计数">a. total 计数和 self 计数 </h5>
+<p>按道理函数统计只需要这些信息，但是由于采样的原理，计数信息分为 <code>total</code> 计数和 <code>self</code> 计数两种，并且函数统计需要保存 <code>total</code> 和 <code>self</code> 类型的 topdown 结果，因此修改过后的数据结构为：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>type FuncList struct {
+	list     bool
+	ListNode []FuncListNode //函数的全局统计，唯一性
+}
+type FuncListNode struct {
+	symbolName    string
+	file          string
+	ev_count      map[string](int64) //compute fuctional-level-topdown total
+	ev_count_self map[string](int64) //compute fuctional-level-topdown self
+	topdown       FuncTopdown
+	topdown_self  FuncTopdown
+}
+type FuncTopdown struct {
+	frontend_bound   float64
+	backendend_bound float64
+	bad_speculation  float64
+	retired          float64
+}
+</code></pre><p>以此图解释 <code>total</code> 和 <code>self</code> 计数：</p>
+<center>
+    <img src="image-exp\exp-sampling.png" alt="/image/sampling.png">
+</center>
+<p>对于函数 A 来说，每次记录都有函数 A ，所以函数 A 的 <code>&lt;event&gt;</code>  <code>total</code> 计数为所有记录的累和 <code>700</code> , <code>total</code> 指只要调用栈存在函数 A 就累和。</p>
+<p>但是除了第一次记录和最后一次记录是函数 A 在运行，其余的记录真正在运行的其实是函数 B 或者函数 C ，也就是 <code>self</code> 计数只累和函数真正运行时的事件计数，图中函数 A 的 <code>self</code> 计数为 <code>200</code> 。</p>
+<p><code>self</code> 计数的方式也很简单，就是用函数 A 的 <code>total</code> 计数减去函数 B 的 <code>total</code> 计数，推广一下就是父节点的 <code>total</code> 计数 - 所有子节点的 <code>total</code> 计数。</p>
+<h3 id="465服务器终端展示">4.6.5.服务器终端展示 </h3>
+<p>实验目标是将上面计算得到的 <code>total</code> 和 <code>self</code> 类型的 topdown 用形如下图的方式在服务器终端展示出来。</p>
+<center>
+    <img src="image-exp\exp-ui.png" alt="/image/sampling.png">
+</center>
+<p>预备使用 <code>goncurses</code> 库做展示。展示的内容也比较简单，就是函数名 <code>symbol</code> + 两个 <code>topdown</code> 指标。视实验进度，可选目标：添加搜索和升降排序的功能。</p>
+<h2 id="47系统实现">4.7.系统实现 </h2>
+<h3 id="471-perf-解析器">4.7.1. perf 解析器 </h3>
+<p>在perf解析器里，实现了两个函数。</p>
+<h4 id="a-func-importfromlinuxperffile-string-perfevent">A. func importFromLinuxPerf(file string) []PerfEvent </h4>
+<p>第一个是 <code>importFromLinuxPerf</code> ，接受文件路径，对文件进行处理，返回PerfEvent数组。</p>
+<center>
+    <img src="image-exp\exp-importfromperf.png" alt="/importfromperf.png">
+</center>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func importFromLinuxPerf(file string) []PerfEvent {
+
+	var eventList []PerfEvent	//返回PerfEvent数组
+	inputFile, _ := os.Open(perf.unfold") //打开文件
+	defer inputFile.Close()
+	var buffer []string		//保存一行
+	inputReader := bufio.NewReader(inputFile)
+	for {
+		inputString, _ := inputReader.ReadString('\n')//按行读
+		inputString = strings.TrimSpace(inputString) //删除所有前导和尾随空格
+		if readerError == io.EOF { //读到EOF
+			return eventList
+		}
+		if inputString != "" { //是同一个节点，衔接
+			buffer = append(buffer, inputString)
+		} else { 		//读到空行，读完了一个记录，传给parseEvents()
+			tmp_ev := parseEvents(buffer)
+			if len(tmp_ev.stack) != 0 {
+				eventList = append(eventList, tmp_ev)
+			}
+			var tmp []string //清空buffer
+			buffer = tmp
+		}
+	}
+}
+</code></pre><h4 id="b-func-parseeventsfilecontent-string-perfevent">B. func parseEvents(Filecontent []string) PerfEvent </h4>
+<p><code>importFromLinuxPerf</code> 函数在调用 <code>parseEvents</code> 时，会将完整的一个记录传给<code>parseEvents</code> ，并期待它返回一个 PerfEvent 对象保存事件计数和调用栈信息。</p>
+<center>
+    <img src="image-exp\exp-parseEvent.png" alt="/parseEvent.png">
+</center>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func parseEvents(Filecontent []string) PerfEvent {
+	var FirstLine string = Filecontent[0]
+	//perf 273148 3526443.330912:       1548    r430076:
+	//构造匹配记录第一行的正则表达式
+	compileRegex := regexp.MustCompile(`\A(.*?)\s+(.*?)\s+(.*?)\.(.*?)\:\s+(.*?)\s+(.*?)\:`)
+	matchArr := compileRegex.FindStringSubmatch(FirstLine)
+	event := new(PerfEvent) //保存要返回的对象
+	if len(matchArr) &lt; 7 {	//意味着没有正确匹配到，可能存在形式错误，输出到log中
+		log.Printf("Event-err:%s\n", FirstLine)
+		return *event //对importFromLinuxPerf返回空的event
+	}
+	event.command = matchArr[1]
+	event.processID = matchArr[2]
+	event.threadID = matchArr[3]
+	event.time, _ = strconv.ParseInt(matchArr[4], 10, 64)
+	event.count, _ = strconv.ParseInt(matchArr[5], 10, 64)
+	event.eventType = matchArr[6]
+	
+	var len_ int = len(Filecontent) //变量别与函数同名
+	Filecontent = Filecontent[1:len_]
+	len_--
+	//for _, line := range Filecontent {
+	for len_ &gt; 0 { //倒叙，使得父节点索引在其子节点之前
+		len_--
+		line := Filecontent[len_]
+		//ffffffffa9063590 kretprobe_trampoline+0x0 ([kernel.kallsyms])
+		//构造匹配调用栈的正则表达式
+		compileRegex := regexp.MustCompile(`(.*?)\s+(.*?)\s+\((.*?)\)`)
+		matchArr := compileRegex.FindStringSubmatch(line)
+		if len(matchArr) &lt; 4 { //意味着没有正确匹配到，可能存在形式错误，输出到log中
+			log.Printf("Stack-err:%s\n", line)
+			continue
+		}
+		stack := new(PerfStackFrame)
+		stack.address = matchArr[1]
+		stack.file = matchArr[3]
+		stack.symbolName = matchArr[2] //symbolName需要处理掉偏移
+		//匹配偏移的正则表达式
+		compileRegex = regexp.MustCompile(`(.*?)\++(.*?)`)
+		matchArr = compileRegex.FindStringSubmatch(stack.symbolName)
+		if len(matchArr) == 3 { //有偏移
+			stack.symbolName = matchArr[1]
+		}
+		event.stack = append(event.stack, *stack)
+	}
+	return *event
+}
+</code></pre><h3 id="472-调用树生成器">4.7.2. 调用树生成器 </h3>
+<p>在调用树生成器中，实现了三个函数</p>
+<h4 id="a-func-rt-calltree-buildtreeeventlist-perfevent">A. func (rt *CallTree) BuildTree(eventList []PerfEvent) </h4>
+<p>第一个函数 <code>BuildTree()</code> ,接收 <code>eventList []PerfEvent</code>记录数组，创建一个 <code>CallTree</code> ，此函数为 <code>CallTree</code> 的方法。</p>
+<center>
+    <img src="image-exp\exp-BuildTree.png" alt="/BuildTree.png">
+</center>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (rt *CallTree) BuildTree(eventList []PerfEvent) {
+	rt.root = true
+	for _, event := range eventList {
+		//保存当前栈的必要信息
+		tmp_count := event.count         //int64
+		tmp_eventTpye := event.eventType //string
+
+		//处理根节点
+		root := rt.RootNodes_Handler(event.stack[0], tmp_count, tmp_eventTpye)
+
+		var len_ int = len(event.stack) //跳过第一个
+
+		rt.Nodes_Handler(root, event.stack[1:len_], tmp_count, tmp_eventTpye)
+	}
+
+}
+</code></pre><h4 id="b-func-rt-calltree-rootnodes_handler-calltreenode">B. func (rt *CallTree) RootNodes_Handler(...) *CallTreeNode </h4>
+<p>因为调用树的所有根节点是保存在 <code>CallTree</code> 的 <code>Children</code> 中的，所以需要和其余节点的处理分开。节点的数据结构类型是相同的，都是 <code>CallTreeNode</code> ，只是因为有多个根节点，所以所有根节点被统计在 <code>CallTree</code> 中。</p>
+<p><code>RootNodes_Handler</code> 接收根节点的 <code>PerfStackFrame</code> , 计数 <code>tmp_count</code> ,事件类型 <code>tmp_eventTpye</code>。期待它返回创建出来的根节点 <code>*CallTreeNode</code> 或者与 <code>PerfStackFrame</code> 相同函数名的根节点，作为 <code>BuildTree</code> 中本次 <code>event</code> 调用栈的根节点来帮助处理其余的节点。</p>
+<center>
+    <img src="image-exp\exp-RootNodes_Handler.png" alt="/RootNodes_Handler.png">
+</center>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (rt *CallTree) RootNodes_Handler(root_level PerfStackFrame, tmp_count int64, tmp_eventTpye string) *CallTreeNode {
+	//遍历根节点寻找
+	for i, node := range rt.Children {
+		if node.info.symbolName == root_level.symbolName {
+			//有的话检查事件类型，已存在就累和，不存在就添加
+			_, ok := node.ev_count[tmp_eventTpye]
+			if ok { //事件已经存在
+				rt.Children[i].ev_count[tmp_eventTpye] += tmp_count //累和
+			} else {
+				rt.Children[i].ev_count[tmp_eventTpye] = tmp_count //添加键值对
+			}
+			return &amp;rt.Children[i]
+		}
+	}
+	//没有就创建节点
+	var newNode CallTreeNode
+	newNode.info.file = root_level.file
+	newNode.info.symbolName = root_level.symbolName
+	newNode.ev_count = make(map[string]int64)
+	newNode.ev_count[tmp_eventTpye] = tmp_count
+	rt.Children = append(rt.Children, newNode)
+
+	for i, node := range rt.Children {
+		if node.info.symbolName == root_level.symbolName {
+			return &amp;rt.Children[i]
+		}
+	}
+	return nil 
+}
+</code></pre><h4 id="c-func-rt-calltree-nodes_handler">C. func (rt *CallTree) Nodes_Handler(...) </h4>
+<p><code>Nodes_Handler</code> 思路与 <code>RootNodes_Handler</code> 实现思路相似，不同之处在于前者需要实现递归构造树，相似之处在于二者都需要先在子节点列表中检查是否存在和自身同名的节点，若有同名，则需要合并计数，没有则需要创建节点。</p>
+<p><code>Nodes_Handler</code> 接收<code>BuildTree</code> 中本次 <code>event</code> 调用栈的根节点作为父节点，同时接收除了根节点以外的该调用栈部分 <code>stack_levels []PerfStackFrame</code> ，同时接收事件和计数信息。每次递归，先检查调用栈是否还剩有未解决的函数，有的话检查接收的父节点的子列表和当前调用栈首层的函数，若存在同名，则合并计数，不存在，则创建节点加入父节点的子列表。然后递归调用 <code>Nodes_Handler</code>，新的节点或者同名节点作为新的父节点， <code>stack_levels</code> 剔除掉首层的函数，作为新的调用栈。</p>
+<center>
+    <img src="image-exp\exp-Nodes_Handler.png" alt="/Nodes_Handler.png">
+</center>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (rt *CallTree) Nodes_Handler(pa_node *CallTreeNode /*父节点 引用传递*/, stack_levels []PerfStackFrame, tmp_count int64, tmp_eventTpye string) /*返回子节点列表比较合适*/ {
+	var len_ = len(stack_levels)
+	if len_ &gt; 0 {
+		//检查父节点的子节点列表有没有同名
+		for i, node := range pa_node.Children {
+			if node.info.symbolName == stack_levels[0].symbolName { //每次递归只处理第一层的stack，因为栈上必然是不同层的树
+				//有的话检查事件类型，已存在就累和，不存在就添加
+				_, ok := node.ev_count[tmp_eventTpye]
+				if ok { //事件已经存在
+					pa_node.Children[i].ev_count[tmp_eventTpye] += tmp_count //累和
+				} else {
+					pa_node.Children[i].ev_count[tmp_eventTpye] = tmp_count //添加键值对
+				}
+				rt.Nodes_Handler(&amp;pa_node.Children[i], stack_levels[1:len_], tmp_count, tmp_eventTpye) //递归构建下一层树
+				return
+			}
+		}
+		//没有同名
+		var newNode CallTreeNode
+		newNode.info.file = stack_levels[0].file
+		newNode.info.symbolName = stack_levels[0].symbolName
+		newNode.ev_count = make(map[string]int64)
+		newNode.ev_count[tmp_eventTpye] = tmp_count
+		pa_node.Children = append(pa_node.Children, newNode)
+		for i, node := range pa_node.Children {
+			if node.info.symbolName == stack_levels[0].symbolName {
+				rt.Nodes_Handler(&amp;pa_node.Children[i], stack_levels[1:len_], tmp_count, tmp_eventTpye) //递归构建下一层树
+				return
+			}
+		}
+	}
+}
+</code></pre><h3 id="473-函数节点的统计">4.7.3. 函数节点的统计 </h3>
+<h4 id="a-函数统计-total-计数">A. 函数统计 total 计数 </h4>
+<h5 id="a-func-fl-funclist-addfunclisteventlist-perfevent">a. func (fl *FuncList) AddFuncList(eventList []PerfEvent) </h5>
+<p>函数统计total计数，根据 <code>eventlist []PerfEvent</code> ，来生成具有唯一性的 <code>funclist []FuncListNode</code> 。<code>AddFuncList</code> 遍历 <code>eventList</code> ，调用 <code>AddStack</code> 处理当前event。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (fl *FuncList) AddFuncList(eventList []PerfEvent) {
+	fl.list = true
+	for _, event := range eventList {
+		fl.AddStack(event.stack, event.count, event.eventType)
+	}
+
+}
+</code></pre><h5 id="b-func-fl-funclist-addstackstack_levels-tmp_count-tmp_eventtpye">b. func (fl *FuncList) AddStack(stack_levels, tmp_count, tmp_eventTpye) </h5>
+<p><code>AddStack</code> 对传入的 <code>event</code> 的调用栈 <code>event.stack</code> 进行处理，整体思路是遍历 <code>stack_levels</code> ，对每一层调用栈做单独处理。</p>
+<p>在遍历得到一层函数后，在 <code>funclist</code> 的节点列表中寻找是否存在同名的函数节点，如果存在，则检查该节点是否存在 <code>tmp_event</code> 的事件类型，若存在，则累和，否则添加键值对，然后跳出 <code>funclist</code> 的遍历，处理下一层函数。</p>
+<p>如果 <code>funclist</code> 的节点列表中不存在，则新建节点保存函数信息和事件计数，添加到 <code>funclist</code> 节点列表中。</p>
+<p>由于需要对 <code>funclist</code> 是否存在同名函数的结果进行区分，新增 <code>exit</code> 作为 <code>flag</code> ，若存在同名函数置 <code>exit=1</code> ，这样无需再次新增节点。</p>
+<center>
+    <img src="image-exp\exp-AddStack.png" alt="/AddStack.png">
+</center>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (fl *FuncList) AddStack(stack_levels []PerfStackFrame, tmp_count int64, tmp_eventTpye string) { //total计数
+	last_name := stack_levels[0].symbolName
+	for i, level := range stack_levels {
+		exit := 0
+
+		//第十四次结果差别较大，猜测同一栈上的同名不做重复计数
+		if last_name == level.symbolName &amp;&amp; i != 0 {
+			continue
+		}
+		//检查有没有同名 合并
+		for i, node := range fl.ListNode {
+			if level.symbolName == node.symbolName {
+				//有的话检查事件类型，已存在就累和，不存在就添加
+				_, ok := node.ev_count[tmp_eventTpye]
+				if ok { //事件已经存在
+					fl.ListNode[i].ev_count[tmp_eventTpye] += tmp_count //累和
+				} else {
+					fl.ListNode[i].ev_count[tmp_eventTpye] = tmp_count //添加键值对
+				}
+				exit = 1
+			}
+			if exit == 1 {
+				break
+			}
+		}
+		if exit == 0 {
+			//没有就创建 加上
+			var newNode FuncListNode
+			newNode.file = level.file
+			newNode.symbolName = level.symbolName
+			newNode.ev_count = make(map[string]int64)
+			newNode.ev_count_self = make(map[string]int64)
+			newNode.ev_count[tmp_eventTpye] = tmp_count
+			fl.ListNode = append(fl.ListNode, newNode)
+		}
+		last_name = level.symbolName
+	}
+}
+</code></pre><h4 id="b-self-计数">B. self 计数 </h4>
+<p>前面讲了函数统计的 <code>total</code> 计数，可以看到是根据 <code>eventlist</code> 来得到的 <code>total</code> 计数。但是 <code>self</code> 计数，只能通过保存了调用栈信息的调用树来得到，具体方法是让父节点减去所有子节点的事件 <code>total</code> 计数，便可以得到父节点的 <code>self</code> 计数，对于叶子节点来说，它们的 <code>total</code> 计数就是自己的 <code>self</code> 计数。</p>
+<h5 id="a-func-fl-funclist-get_selfct-calltree">a. func (fl *FuncList) Get_self(cT CallTree) </h5>
+<p>函数 <code>Get_self</code> 遍历 <code>CallTree</code> 的所有根节点，然后对每个根节点，调用 <code>iter_get_self</code> 来计算 <code>self</code> 计数。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (fl *FuncList) Get_self(cT CallTree) { //问题所在，父节点进去之后莫名其妙丢失计数，已修复
+	for _, cTnode := range cT.Children {
+		fl.iter_get_self(cTnode)
+	}
+}
+</code></pre><h5 id="b-func-fl-funclist-iter_get_selfctnode-calltreenode-string">b. func (fl *FuncList) iter_get_self(cTnode CallTreeNode) string </h5>
+<p>函数 <code>iter_get_self</code> 接收树节点，返回这个节点的symbolname，从函数名可以看到，它用来递归的计算一个调用树的所有节点。</p>
+<p>为了避免计数相减的时候改变原节点的计数，因此在一开始新建节点，用来复制传入的节点，代替它做减法。</p>
+<p>对传入的节点做判断，如果是叶节点，则直接调用Add_self函数，若不是，则新节点需要代替原节点对原节点的每一个子节点做计数减法。</p>
+<p>需要注意的是， <code>iter_get_self</code> 会返回一个 <code>string</code> ，是传入节点的 <code>symbolname</code>，主要用来判断同一栈上是否存在同名函数，若有，则跳过这个节点进入下一个节点。</p>
+<p>新节点在做完减法后，会被送入 <code>Add_self</code> 。</p>
+<center>
+    <img src="image-exp\exp-iter_get_self.png" alt="">
+</center>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (fl *FuncList) iter_get_self(cTnode CallTreeNode) string {
+	var newNode CallTreeNode //新建复制才能解决父节点在self计算后计数丢失的问题
+	newNode.info.file = cTnode.info.file
+	newNode.info.symbolName = cTnode.info.symbolName
+	newNode.ev_count = make(map[string]int64)
+	for event, count := range cTnode.ev_count {
+		newNode.ev_count[event] = count
+	}
+
+	if cTnode.Children != nil { //非叶节点
+		//子节点累和//父节点减去子节点的计数器
+
+		for _, child_node := range cTnode.Children { //准备修改成cT的函数，返回一个cTnode用来加入list 补充：由于需要递归，遂放弃
+			/* if child_node.info.symbolName == cTnode.info.symbolName { //父子同名
+				fl.iter_get_self1(child_node)
+				return
+			} */
+			child_name := fl.iter_get_self(child_node)
+			if child_name == cTnode.info.symbolName {
+				//return child_name
+			}
+			for event, count := range child_node.ev_count {
+				newNode.ev_count[event] -= count
+			}
+		} //添加到funclist
+		fl.Add_self(newNode)
+		return cTnode.info.symbolName
+	} else {
+		fl.Add_self(newNode)
+		return cTnode.info.symbolName
+	}
+}
+</code></pre><h5 id="c-func-fl-funclist-add_selfctnode-calltreenode">c. func (fl *FuncList) Add_self(cTnode CallTreeNode) </h5>
+<p>在 <code>iter_get_self</code> 传入保有self计数的cTnode后， <code>Add_self</code> 需要在 <code>funclist</code> 中找到对应的函数节点，然后把事件计数复制到函数节点内。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (fl *FuncList) Add_self(cTnode CallTreeNode) {
+	for i, flnode := range fl.ListNode { //在fl中找到节点的对应函数
+		if flnode.symbolName == cTnode.info.symbolName {
+			for event, count := range cTnode.ev_count { //逻辑修改后self计数更正常了
+				_, ok := fl.ListNode[i].ev_count_self[event]
+				if ok {
+					fl.ListNode[i].ev_count_self[event] += count
+				} else {
+					fl.ListNode[i].ev_count_self[event] = count
+				}
+			}
+			break
+		}
+	}
+}
+</code></pre><h4 id="c-topdown-计算">C. topdown 计算 </h4>
+<h5 id="a-func-fl-funclist-computetopdown">a. func (fl *FuncList) ComputeTopdown() </h5>
+<p>计算topdown的公式如前面所示，在此再做展示：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>total dispatch slots =6*cycles_not_in_halt(r430076)
+		cycles_not_in_halt : r430076
+FrontendBound=no_dispatch_per_solt(front) / total dispatch slots
+		no_dispatch_per_solt(front) : r1004301A0
+BackendBound=no_dispatch_per_solt(back) / total dispatch slots
+		no_dispatch_per_solt(back) : r100431EA0
+bad_speculation=source_of_op_dispatched_from_decoder - Rrtired_macro_ops / total dispatch slots
+		source_of_op_dispatched_from_decoder : r4307AA;
+retire=retired_macro_ops / total dispatch slots
+		Rrtired_macro_ops : r4300C1
+
+</code></pre><p>计算topdown的实现较为简单，total 与 self 的计算公式是相同的，只是实现的时候有先后之分。</p>
+<p>唯一需要注意的是，因为有的函数缺乏一些事件的计数，会导致 topdown 的部分类别是无法计算的，只需要添加一些判断就可以了。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (fl *FuncList) ComputeTopdown() {
+	
+	// total的计算
+	for i, node := range fl.ListNode {
+
+		//var total_dispatch_slots int64
+		//cycles_not_in_halt(r430076)如果没有，所有的都不能计算
+		cycles_not_in_halt, ok := node.ev_count["r430076"]
+		if ok &amp;&amp; cycles_not_in_halt != 0 { //事件r430076有记录
+			//total_dispatch_slots = 6 * cycles_not_in_halt //Zen 4 六路CPU
+		} else {
+			continue //该node的topdown不能计算
+		}
+		//Frontend
+		no_dispatch_per_solt_front, ok := node.ev_count["r1004301A0"]
+		if ok &amp;&amp; no_dispatch_per_solt_front != 0 {
+			fl.ListNode[i].topdown.frontend_bound = DivideFloat(DivideFloat(int64Tofloat64(no_dispatch_per_solt_front), 6.0), int64Tofloat64(cycles_not_in_halt))
+		} else {
+			fl.ListNode[i].topdown.frontend_bound = 0
+		}
+		//retired
+		retired_macro_ops, ok := node.ev_count["r4300C1"]
+		if ok &amp;&amp; retired_macro_ops != 0 {
+			fl.ListNode[i].topdown.retired = DivideFloat(DivideFloat(int64Tofloat64(retired_macro_ops), 6.0), int64Tofloat64(cycles_not_in_halt))
+			//bad_speculation
+			source_of_op_dispatched_from_decoder, ok := node.ev_count["r4307AA"]
+			if ok &amp;&amp; source_of_op_dispatched_from_decoder != 0 {
+				source_of_op_dispatched_from_decoder = source_of_op_dispatched_from_decoder - retired_macro_ops
+				fl.ListNode[i].topdown.bad_speculation = DivideFloat(DivideFloat(int64Tofloat64(source_of_op_dispatched_from_decoder), 6.0), int64Tofloat64(cycles_not_in_halt))
+			} else {
+				fl.ListNode[i].topdown.bad_speculation = 0
+			}
+		} else {
+			fl.ListNode[i].topdown.retired = 0
+			fl.ListNode[i].topdown.bad_speculation = 0
+		}
+
+		//backend 待优化: 1-其他三个
+		no_dispatch_per_solt_back, ok := node.ev_count["r100431EA0"]
+		if ok &amp;&amp; no_dispatch_per_solt_back != 0 {
+			fl.ListNode[i].topdown.backendend_bound = DivideFloat(DivideFloat(int64Tofloat64(no_dispatch_per_solt_back), 6.0), int64Tofloat64(cycles_not_in_halt))
+		} else {
+			fl.ListNode[i].topdown.backendend_bound = 0
+		}
+
+	}
+	// self的计算
+	......
+}
+</code></pre><h3 id="474-服务器终端展示">4.7.4. 服务器终端展示 </h3>
+<p>使用 <code>goncurses</code> 库，我们要将 funclis t中的所有节点展示在终端中，使用 <code>menu</code> 对象，将一个函数节点的内容做成一个 <code>menuitem</code>，添加到 <code>menu</code> 中展示。</p>
+<p>同时，主函数中要调用其他结构的方法来实现对 <code>perf.unfold</code> 的处理。</p>
+<center>
+    <img src="image-exp\exp-main_ui.png" ,alt="exp-main_ui.png">
+</center>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func main() {
+	var fileName string = "perf.unfold"
+	eventList := importFromLinuxPerf(fileName) //perf处理的节点会出现少许缺漏,已找到问题
+	var cT CallTree
+	cT.BuildTree(eventList)
+	var fl FuncList
+	fl.AddFuncList(eventList)
+	fl.Get_self(cT) //添加一个遍历树计算self的计数
+	fl.ComputeTopdown()
+
+	stdscr, _ := gc.Init()
+	defer gc.End()
+
+	gc.StartColor()
+	gc.Raw(true)
+	gc.Echo(false)
+	gc.Cursor(0)
+	stdscr.Keypad(true)
+	gc.InitPair(1, gc.C_WHITE, gc.C_BLACK)
+	gc.InitPair(2, gc.C_CYAN, gc.C_BLACK)
+
+	// build the menu items
+	items := make([]*gc.MenuItem, len(fl.ListNode))
+	for i, node := range fl.ListNode {
+		mes := standardoutput(node)
+		items[i], _ = gc.NewItem(mes, "")
+		defer items[i].Free()
+	}
+	rows, cols := stdscr.MaxYX()
+	HEIGHT, WIDTH := rows, cols
+	// create the menu
+	menu, _ := gc.NewMenu(items)
+	defer menu.Free()
+	log.Printf("rows:%d,cols:%d", rows, cols)
+	menuwin, _ := gc.NewWindow(HEIGHT, WIDTH, 0, 0)
+
+	menuwin.Keypad(true)
+
+	menu.SetWindow(menuwin)
+	dwin := menuwin.Derived(HEIGHT-1, WIDTH, 1, 0)
+	menu.SubWindow(dwin)
+	menu.Format(HEIGHT-1, 1)
+	//menu.Mark(" * ")
+
+	// Print centered menu title_
+	title := "Total_front    Total_back    Total_badspec    Total_retired    Self_front    Self_back    Self_badspec    Self_retired    Symbol"
+	menuwin.ColorOn(1)
+	menuwin.MovePrint(0, 1, title)
+	menuwin.ColorOff(1)
+	
+	stdscr.Refresh()
+
+	menu.Post()
+	defer menu.UnPost()
+	menuwin.Refresh()
+
+	for {
+		gc.Update()
+		ch := menuwin.GetChar()
+		if ch == 'q' {
+			return
+		}
+		if ch == gc.KEY_DOWN || ch == gc.KEY_HOME || ch == gc.KEY_END || ch == gc.KEY_LEFT || ch == gc.KEY_PAGEDOWN || ch == gc.KEY_PAGEUP || ch == gc.KEY_RIGHT || ch == gc.KEY_UP {
+			menu.Driver(gc.DriverActions[ch]) //对键盘输入的常见响应的便利映射
+		}
+	}
+}
+
+func init() {
+	logFile, err := os.OpenFile("./result.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+	if err != nil {
+		fmt.Println("open log file failed, err:", err)
+		return
+	}
+	log.SetOutput(logFile)
+	log.SetFlags(log.Llongfile | log.Lmicroseconds | log.Ldate)
+}
+</code></pre><h2 id="48-系统验证">4.8. 系统验证 </h2>
+<h3 id="481调用栈生成树的验证">4.8.1.调用栈生成树的验证 </h3>
+<h4 id="a-根节点的生成的验证">A. 根节点的生成的验证 </h4>
+<p>取消掉偏移后的根节点输出，此时尚未加入子节点的生成，只验证根节点的生成是否正确。</p>
+<p>结论：正确实现。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&amp;main.CallTree{root:true, Children:[]
+main.CallTreeNode{
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"[unknown]", file:"[unknown]"}, 
+        ev_count:map[string]int64{"r1004300C2":8361507, "r430076":616076866, "r4300C1":1630911004, "r4300C3":34795, "r43019F":40522, "r430796":1001}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"_dl_map_object", file:"/usr/lib64/ld-2.32.so"}, 
+        ev_count:map[string]int64{"r4300C1":188062}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"mmap64", file:"/usr/lib64/ld-2.32.so"}, 
+        ev_count:map[string]int64{"r4300C1":742428, "r4300C3":6528, "r43019F":253}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"do_lookup_x", file:"/usr/lib64/ld-2.32.so"}, 
+        ev_count:map[string]int64{"r4300C1":198437}, 
+        Children:[]main.CallTreeNode(nil)},
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"__GI___execve", file:"/usr/lib64/libc-2.32.so"},
+        ev_count:map[string]int64{"r4300C1":1220004, "r4300C3":11732}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"_start", file:"/usr/lib64/ld-2.32.so"}, 
+        ev_count:map[string]int64{"r4300C1":351354, "r43019F":1870}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"strcmp", file:"/usr/lib64/ld-2.32.so"}, 
+        ev_count:map[string]int64{"r4300C1":333103}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"check_match", file:"/usr/lib64/ld-2.32.so"}, 
+        ev_count:map[string]int64{"r43019F":1140}, Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"__strcmp_avx2", file:"/usr/lib64/libc-2.32.so"}, 
+        ev_count:map[string]int64{"r1004300C2":53558120, "r430076":4149930454, "r4300C1":10716969624, "r4300C3":140404, "r43019F":223755, "r430796":6177}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"Func_2", file:"/root/UnixBench-5.1.3/UnixBench5.1.3/pgms/dhry2reg"},
+        ev_count:map[string]int64{"r1004300C2":4510687, "r430076":369365155, "r4300C1":945206104, "r4300C3":12437, "r43019F":25405, "r430796":638}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"main", file:"/root/UnixBench-5.1.3/UnixBench5.1.3/pgms/dhry2reg"}, 
+        ev_count:map[string]int64{"r1004300C2":10872752, "r430076":820648824, "r4300C1":2269431488, "r4300C3":27731, "r43019F":47374, "r430796":1359}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{info:main.funcInfo{
+        symbolName:"Proc_8", file:"/root/UnixBench-5.1.3/UnixBench5.1.3/pgms/dhry2reg"},
+        ev_count:map[string]int64{"r1004300C2":2711487, "r430076":183155635, "r4300C1":529760875, "r4300C3":6333, "r43019F":10214, "r430796":212}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"Proc_7", file:"/root/UnixBench-5.1.3/UnixBench5.1.3/pgms/dhry2reg"}, 
+        ev_count:map[string]int64{"r1004300C2":1337070, "r430076":84255285, "r4300C1":289902270, "r4300C3":3701, "r43019F":5139, "r430796":167}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"Func_1", file:"/root/UnixBench-5.1.3/UnixBench5.1.3/pgms/dhry2reg"}, 
+        ev_count:map[string]int64{"r1004300C2":1116005, "r430076":94917393, "r4300C1":190996370, "r4300C3":2187, "r43019F":2830, "r430796":119}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"hrtimer_interrupt", file:"[kernel.kallsyms]"}, 
+        ev_count:map[string]int64{"r1004300C2":27114, "r4300C3":77}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"Proc_1", file:"/root/UnixBench-5.1.3/UnixBench5.1.3/pgms/dhry2reg"}, 
+        ev_count:map[string]int64{"r1004300C2":13047, "r430076":763473, "r4300C3":55}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"__hrtimer_run_queues", file:"[kead117d2013 __strcmp_avx2+0x23 (/usr/lib64/libc-2.32.so"}, 
+        ev_count:map[string]int64{"r430796":9}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"scheduler_tick", file:"[kernel.kallsyms]"}, 
+        ev_count:map[string]int64{"r1004300C2":34409}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"tick_sched_handle", file:"[kernel.kallsyms]"}, 
+        ev_count:map[string]int64{"r1004300C2":36466}, 
+        Children:[]main.CallTreeNode(nil)}, 
+    main.CallTreeNode{
+        info:main.funcInfo{symbolName:"entry_SYSCALL_64_after_hwframe", file:"[kernel.kallsyms]"}, 
+        ev_count:map[string]int64{"r1004300C2":27873}, 
+        Children:[]main.CallTreeNode(nil)}}}
+</code></pre><h4 id="b-子节点的验证">B. 子节点的验证 </h4>
+<p>这是 <code>history_results.txt</code> 中记录的第三次输出结果，这是依据 <code>perf.unfold</code> 文件中的第一个记录建立的调用树，一次验证子节点生成是否正确。</p>
+<p>结论：正确实现。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&amp;main.CallTree{
+    root:true, Children:[]main.CallTreeNode{
+        main.CallTreeNode{
+            info:main.funcInfo{symbolName:"[unknown]", file:"[unknown]"}, 
+            ev_count:map[string]int64{"r430076":1}, 
+            Children:[]main.CallTreeNode{
+                main.CallTreeNode{
+                    info:main.funcInfo{symbolName:"kretprobe_trampoline", file:"[kernel.kallsyms]"}, 
+                    ev_count:map[string]int64{"r430076":1}, 
+                    Children:[]main.CallTreeNode{
+                        main.CallTreeNode{
+                            info:main.funcInfo{symbolName:"__x64_sys_execve", file:"[kernel.kallsyms]"}, 
+                            ev_count:map[string]int64{"r430076":1}, 
+                            Children:[]main.CallTreeNode{
+                                main.CallTreeNode{
+                                    info:main.funcInfo{symbolName:"do_execveat_common", file:"[kernel.kallsyms]"}, 
+                                    ev_count:map[string]int64{"r430076":1}, 
+                                    Children:[]main.CallTreeNode{
+                                        main.CallTreeNode{
+                                        info:main.funcInfo{symbolName:"bprm_execve", file:"[kernel.kallsyms]"}, 
+                                        ev_count:map[string]int64{"r430076":1}, 
+                                        Children:[]main.CallTreeNode{
+                                            main.CallTreeNode{
+                                                info:main.funcInfo{symbolName:"exec_binprm", file:"[kernel.kallsyms]"}, 
+                                                ev_count:map[string]int64{"r430076":1}, 
+                                                Children:[]main.CallTreeNode{
+                                                    main.CallTreeNode{
+                                                        info:main.funcInfo{symbolName:"search_binary_handler", file:"[kernel.kallsyms]"}, 
+                                                        ev_count:map[string]int64{"r430076":1}, 
+                                                        Children:[]main.CallTreeNode{
+                                                            main.CallTreeNode{
+                                                                info:main.funcInfo{symbolName:"load_elf_binary", file:"[kernel.kallsyms]"}, 
+                                                                ev_count:map[string]int64{"r430076":1}, 
+                                                                Children:[]main.CallTreeNode{
+                                                                    main.CallTreeNode{info:main.funcInfo{symbolName:"begin_new_exec", file:"[kernel.kallsyms]"},
+                                                                    ev_count:map[string]int64{"r430076":1}, 
+                                                                    Children:[]main.CallTreeNode{
+                                                                        main.CallTreeNode{
+                                                                            info:main.funcInfo{symbolName:"perf_event_exec", file:"[kernel.kallsyms]"}, 
+                                                                            ev_count:map[string]int64{"r430076":1}, 
+                                                                            Children:[]main.CallTreeNode{
+                                                                                main.CallTreeNode{
+                                                                                    info:main.funcInfo{symbolName:"perf_event_enable_on_exec", file:"[kernel.kallsyms]"}, 
+                                                                                    ev_count:map[string]int64{"r430076":1}, 
+                                                                                    Children:[]main.CallTreeNode{
+                                                                                        main.CallTreeNode{
+                                                                                            info:main.funcInfo{symbolName:"amd_pmu_enable_all", file:"[kernel.kallsyms]"}, 
+                                                                                            ev_count:map[string]int64{"r430076":1}, 
+                                                                                            Children:[]main.CallTreeNode{
+                                                                                                main.CallTreeNode{
+                                                                                                    info:main.funcInfo{symbolName:"x86_pmu_enable_event", file:"[kernel.kallsyms]"}, 
+                                                                                                    ev_count:map[string]int64{"r430076":1}, 
+                                                                                                    Children:[]main.CallTreeNode(nil)
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    }   
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre><h3 id="482-函数节点统计的验证">4.8.2. 函数节点统计的验证 </h3>
+<p>以下摘自 <code>\code\result.log</code> ，只选取了部分内容以做展示，此处输出格式不显示结构体中的名称，同时已经隐去时间和路径信息。</p>
+<p>展示了函数名 symbolname (如 <code>entry_SYSCALL_64_after_hwframe</code> ) ，函数路径 ( <code>[kernel.kallsyms]</code> )，两个 map 中分别存储着 total 计数和 self 计数，随后展示的是 total topdown ( <code>{0.3635857349267998 0.5008353544453581 -0.0865376410323977 0.3369841830286689}</code> )和 self topdown ( <code> {0 0 0 0}</code> )的计算结果，第二行会展示 total cycles ( <code> total:0.9846</code> )和 self cycles ( <code>slef:0.0000</code> )的占比结果</p>
+<p>结论：正确实现</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code> {[unknown] [unknown] map[cycles:16429227 r1004301A0:194784722 r100431EA0:46673562 r1004360A0:3218 r430076:57431034 r4300C1:91251378 r4307AA:37598559] map[cycles:0 r1004301A0:0 r100431EA0:0 r1004360A0:0 r430076:0 r4300C1:0 r4307AA:0] {0.5652714024014056 0.1354481435518461 -0.1557021762497088 0.2648143719003111} {0 0 0 0}}
+ total:0.0058,	slef:0.0000
+ {entry_SYSCALL_64_after_hwframe [kernel.kallsyms] map[cycles:2810462214 r1004301A0:9664188400 r100431EA0:13312313550 r1004360A0:579782 r430076:4430036619 r4300C1:8957113504 r4307AA:6656923945] map[cycles:0 r1004301A0:0 r100431EA0:0 r1004360A0:0 r430076:771108 r4300C1:0 r4307AA:0] {0.3635857349267998 0.5008353544453581 -0.0865376410323977 0.3369841830286689} {0 0 0 0}}
+ total:0.9846,	slef:0.0000
+ {do_syscall_64 [kernel.kallsyms] map[cycles:2812315777 r1004301A0:9667779866 r100431EA0:13312313550 r1004360A0:579782 r430076:4429274140 r4300C1:8956401180 r4307AA:6656055653] map[cycles:0 r1004301A0:0 r100431EA0:0 r1004360A0:0 r430076:0 r4300C1:0 r4307AA:0] {0.3637834454562051 0.5009215583780665 -0.0865584119742403 0.3370154054413751} {0 0 0 0}}
+ total:0.9853,	slef:0.0000
+ {__x64_sys_execve [kernel.kallsyms] map[cycles:2414883 r1004301A0:2827303 r100431EA0:7763883 r430076:2113005 r4300C1:1288304 r4307AA:1348880] map[cycles:0 r1004301A0:0 r100431EA0:0 r430076:0 r4300C1:0 r4307AA:0] {0.2230080698657441 0.6123887544042727 0.0047780293941567 0.1016170493365294} {0 0 0 0}}
+ total:0.0008,	slef:0.0000
+ {do_execveat_common [kernel.kallsyms] map[cycles:2414883 r1004301A0:2387393 r100431EA0:7693785 r430076:2113005 r4300C1:1288304 r4307AA:1279366] map[cycles:0 r1004301A0:0 r100431EA0:0 r430076:0 r4300C1:0 r4307AA:0] {0.1883094613279823 0.6068596619506343 -0.0007049991205258 0.1016170493365294} {0 0 0 0}}
+ total:0.0008,	slef:0.0000
+ {bprm_execve [kernel.kallsyms] map[cycles:2414883 r1004301A0:2387393 r100431EA0:7693785 r430076:2113005 r4300C1:1219271 r4307AA:1279366] map[cycles:0 r1004301A0:0 r100431EA0:0 r430076:0 r4300C1:0 r4307AA:0] {0.1883094613279823 0.6068596619506343 0.0047400897458044 0.0961719604701992} {0 0 0 0}}
+ total:0.0008,	slef:0.0000
+ {exec_binprm [kernel.kallsyms] map[cycles:2414883 r1004301A0:2387393 r100431EA0:7693785 r430076:2113005 r4300C1:1219271 r4307AA:1279366] map[cycles:0 r1004301A0:0 r100431EA0:0 r430076:0 r4300C1:0 r4307AA:0] {0.1883094613279823 0.6068596619506343 0.0047400897458044 0.0961719604701992} {0 0 0 0}}
+ total:0.0008,	slef:0.0000
+ {search_binary_handler [kernel.kallsyms] map[cycles:2414883 r1004301A0:2387393 r100431EA0:7693785 r430076:2113005 r4300C1:1219271 r4307AA:1279366] map[cycles:0 r1004301A0:0 r100431EA0:0 r430076:0 r4300C1:0 r4307AA:0] {0.1883094613279823 0.6068596619506343 0.0047400897458044 0.0961719604701992} {0 0 0 0}}
+ total:0.0008,	slef:0.0000
+</code></pre><h3 id="483-终端-ui-的验证">4.8.3. 终端 UI 的验证 </h3>
+<p>截取终端展示的部分，所有功能均已正确实现</p>
+<center>
+    <img src="image-exp\exp-ui1.png" alt="/image-exp/exp-ui1.png">
+</center>
+<h1 id="5比赛过程中的重要进展">5.比赛过程中的重要进展 </h1>
+<h2 id="51初赛阶段">5.1.初赛阶段 </h2>
+<ul>
+<li>调研 Topdown 分析方法在 AMD 和 Intel 上的区别和可行性</li>
+<li>调研 perf 工具和 FlameGraph 工具的使用</li>
+<li>调研 UnixBench 组成及其测试方法</li>
+<li>对 Aliyun ECS 的两个实例进行基于 UnixBench 的性能测试，得到总体测试结果和单项测试结果</li>
+<li>用 <strong>perf</strong> 工具对 UnixBench 单项测试进行性能记录</li>
+<li>用 <strong>FlameGraph</strong> 可视化 UnixBench 单项测试的调用栈和时间占比</li>
+<li>在 perf 的基础上用<strong>topdown</strong>分析方法分析 UnixBench 单项测试</li>
+<li>根据 perf 的性能记录和 Falmegraph ，<strong>计算得到性能数据</strong>并对结果进行了分析</li>
+<li>和指导老师商讨后续的函数级 topdown 工具的实现，构思了系统框架，讨论了实现步骤</li>
+</ul>
+<h2 id="52决赛一阶段">5.2.决赛一阶段 </h2>
+<ul>
+<li>调研得到了 AMD 的 topdown 计算公式</li>
+<li>首先设计并实现了 <code>perf.unfold</code> <strong>文件解析器</strong></li>
+<li>其次设计并实现了<strong>调用树生成器</strong></li>
+<li>之后设计并实现了<strong>函数节点的统计</strong></li>
+<li>最后实现 <strong>topdown 的计算和展示</strong></li>
+</ul>
+<h1 id="6g7a-与-g8a-性能比较结果">6.g7a 与 g8a 性能比较结果 </h1>
+<h2 id="61-unixbench-总测试结果">6.1. UnixBench 总测试结果 </h2>
+<p>Aliyun ECS 的两个实例（g7a和g8a通用实例）UnixBench 总体测试结果和单项测试结果</p>
+<h3 id="611-g7a-的-unixbench-总体跑分-26113">6.1.1. g7a 的 UnixBench 总体跑分 2611.3 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Benchmark Run: Fri Mar 22 2024 16:49:42 - 17:17:40
+64 CPUs in system; running 1 parallel copy of tests
+[...]
+System Benchmarks Index Values               BASELINE       RESULT    INDEX
+Dhrystone 2 using register variables         116700.0   45406252.2   3890.9
+Double-Precision Whetstone                       55.0       7579.0   1378.0
+Execl Throughput                                 43.0       5822.7   1354.1
+File Copy 1024 bufsize 2000 maxblocks          3960.0    1923395.9   4857.1
+File Copy 256 bufsize 500 maxblocks            1655.0     522903.0   3159.5
+File Copy 4096 bufsize 8000 maxblocks          5800.0    5584873.2   9629.1
+Pipe Throughput                               12440.0    2999670.2   2411.3
+Pipe-based Context Switching                   4000.0     352670.3    881.7
+Process Creation                                126.0      12048.3    956.2
+Shell Scripts (1 concurrent)                     42.4      10050.6   2370.4
+Shell Scripts (8 concurrent)                      6.0       5291.7   8819.4
+System Call Overhead                          15000.0    3307617.8   2205.1
+                                                                   ========
+System Benchmarks Index Score                                        2611.3
+</code></pre><h3 id="612-g8a-的-unixbench-总体跑分-32072">6.1.2. g8a 的 UnixBench 总体跑分 3207.2 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Benchmark Run: Mon Mar 25 2024 10:16:11 - 10:44:08
+64 CPUs in system; running 1 parallel copy of tests
+[...]
+System Benchmarks Index Values               BASELINE       RESULT    INDEX
+Dhrystone 2 using register variables         116700.0   55894109.5   4789.6
+Double-Precision Whetstone                       55.0       8714.1   1584.4
+Execl Throughput                                 43.0       7833.6   1821.8
+File Copy 1024 bufsize 2000 maxblocks          3960.0    2542943.8   6421.6
+File Copy 256 bufsize 500 maxblocks            1655.0     697050.0   4211.8
+File Copy 4096 bufsize 8000 maxblocks          5800.0    7266549.7  12528.5
+Pipe Throughput                               12440.0    3698709.8   2973.2
+Pipe-based Context Switching                   4000.0     431890.5   1079.7
+Process Creation                                126.0      13192.1   1047.0
+Shell Scripts (1 concurrent)                     42.4      12084.2   2850.0
+Shell Scripts (8 concurrent)                      6.0       6154.3  10257.1
+System Call Overhead                          15000.0    3859487.8   2573.0
+                                                                   ========
+System Benchmarks Index Score                                        3207.2
+</code></pre><h2 id="62-perf-记录-unixbench-单项测试结果">6.2. perf 记录 UnixBench 单项测试结果 </h2>
+<p>对于 UnixBench 包含的</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Dhrystone(dhry2reg、dhry2)
+Whetstone(whetstone-double)
+File Copy(fstime)
+Pipe Throughput(pipe)
+Pipe-based Context Switching(context1)
+Process Creation(spawn)
+System Call Overhead(mix、close、getpid、exec)
+</code></pre><p>分别执行以下的命令。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>perf stat taskset -c 0 ./&lt;subcommand&gt; &lt;duration&gt;
+perf record -g taskset -c 0 ./&lt;subcommand&gt; &lt;duration&gt;
+perf report -n --stdio
+</code></pre><p>性能测试结果的记录非常长，放在正文影响阅读。<br>
+具体指令和测试结果在于<a href="g7a-unixbench.md">g7a-unixbench.md</a>和<a href="g8a-unixbench.md">g8a-unixbench.md</a>。</p>
+<h2 id="63-falmegraph-可视化unixbench-单项测试结果">6.3. FalmeGraph 可视化UnixBench 单项测试结果 </h2>
+<p>可见文件夹 <code>FlameGraph</code> 和 <a href="g7a-unixbench.md">g7a-unixbench.md</a> 和 <a href="g8a-unixbench.md">g8a-unixbench.md</a> 中</p>
+<h2 id="64-topdown-分析结果">6.4. Topdown 分析结果 </h2>
+<p>可见 <a href="g7a-unixbench.md">g7a-unixbench.md</a> 和 <a href="g8a-unixbench.md">g8a-unixbench.md</a> 中。</p>
+<h2 id="65-数据处理与分析">6.5. 数据处理与分析 </h2>
+<h3 id="651dhrystone">6.5.1.Dhrystone </h3>
+<h4 id="a-dhry2reg">A. dhry2reg </h4>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0 ./pgms/dhry2reg 5
+</code></pre><p>perf 记录下的每秒循环 <strong>loops perf second(lps)</strong>，由此可计算单次循环多少纳秒<strong>nanoseconds per loop</strong>。</p>
+<h5 id="a-跑分结果">a. 跑分结果 </h5>
+<p>下表表示对于单项测试 dhry2reg ，g8a 每秒循环数显著多于 g7a，并且从一个循环所需的纳秒计算，<strong>g8a 比 g7a 性能提升 21.7%</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lps</td>
+<td style="text-align:center">COUNT/217,258,211/1/lps</td>
+<td style="text-align:center">COUNT/277,575,108/1/lps</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">spl</td>
+<td style="text-align:center">4.6 ns</td>
+<td style="text-align:center">3.6 ns</td>
+<td style="text-align:center">提升21.7%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="b-flamegraph-的热点函数">b. FlameGraph 的热点函数 </h5>
+<p>g7a-dhry2reg：</p>
+<center>
+    <img src="image\g7a-dhry2reg.png" alt="/image/g7a-dhry2reg.png">
+</center>
+<p>g8a-dhry2reg：</p>
+<center>
+    <img src="image\g8a-dhry2reg.png" alt="/image/g8a-dhry2reg.png">
+</center>
+<p>而根据 FlameGraph 显示，单项测试 dhry2reg 占 CPU 占比最高的函数为 _strcmp_avx2 。</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<p>通过计算，可以看到 g8a 的热点函数用时比 g7a 用时相比，<strong>性能提高了 19.4%</strong> 。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_strcmp_avx2</td>
+<td style="text-align:center">3.1 ns (66.69%)</td>
+<td style="text-align:center">2.5 ns (68.17%)</td>
+<td style="text-align:center">提高了19.4%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="b-dhry2">B. dhry2 </h4>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0 ./pgms/dhry2  5
+</code></pre><h5 id="a-跑分结果-1">a. 跑分结果 </h5>
+<p>下表表示对于单项测试 dhry2 ，g8a 每秒循环数显著多于 g7a，并且从一个循环所需的纳秒计算，<strong>g8a 比 g7a 性能提升 17.8%</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lps</td>
+<td style="text-align:center">COUNT/224,567,292/1/lps</td>
+<td style="text-align:center">COUNT/273,333,029/1/lps</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">spl</td>
+<td style="text-align:center">4.5ns</td>
+<td style="text-align:center">3.7 ns</td>
+<td style="text-align:center">提升17.8%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="b-flamegraph-的热点函数-1">b. FlameGraph 的热点函数 </h5>
+<p>g7a-dhry2：</p>
+<center>
+    <img src="image\g7a-dhry2.png" alt="/image/g7a-dhry2.png">
+</center>
+<p>g8a-dhry2：</p>
+<center>
+    <img src="image\g8a-dhry2.png" alt="/image/g8a-dhry2.png">
+</center>
+<p>而根据 FlameGraph 显示，单项测试 dhry2 占 CPU 占比最高的函数为 _strcmp_avx2 。</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<p>通过计算，可以看到 g8a 的热点函数用时比 g7a 用时相比，<strong>性能提高了 16.7%</strong> 。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_strcmp_avx2</td>
+<td style="text-align:center">3.0 ns (65.75%)</td>
+<td style="text-align:center">2.5 ns (68.10%)</td>
+<td style="text-align:center">提高了16.7%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="652-whetstone-double">6.5.2. whetstone-double </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:./whetstone-double 
+</code></pre><h4 id="a-跑分结果-2">A. 跑分结果 </h4>
+<p>单项测试 whetstone-double 是测试浮点运算效率和速度的，不同于 Dhrystone 测试字符串处理。</p>
+<p>下表表示对于单项测试 whetstone-double ，g8a 的 <strong>MWIPS(Million Whetstone Instructions executed Per Second ，每秒执行了多少百万条 Whestone 指令</strong>)显著多于 g7a ，<strong>性能提升了 15.1%</strong> 。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Loop content</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">whetstone-double</td>
+<td style="text-align:center">COUNT/7586.745/0/MWIPS</td>
+<td style="text-align:center">COUNT/8730.841/0/MWIPS</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">time</td>
+<td style="text-align:center">9.946</td>
+<td style="text-align:center">9.946</td>
+<td style="text-align:center">提升了15.1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>whetstone-double 的<strong>浮点数测量结果</strong>如下表所示，<strong>单位 MFLOPS(Million Floating-point Operations Per Second ,每秒可执行多少百万浮点数操作)</strong>，对于 N1，N2，N6 来说，g8a 比 g7a 性能分别提升 14.0%，14.1%，14.0% 。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Loop content</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">N1 floating point</td>
+<td style="text-align:center">1432.856 MFLOPS</td>
+<td style="text-align:center">1633.231  MFLOPS</td>
+<td style="text-align:center">提升了14.0%</td>
+</tr>
+<tr>
+<td style="text-align:center">N2 floating point</td>
+<td style="text-align:center">1374.415 MFLOPS</td>
+<td style="text-align:center">1567.840  MFLOPS</td>
+<td style="text-align:center">提升了14.1%</td>
+</tr>
+<tr>
+<td style="text-align:center">N6 floating point</td>
+<td style="text-align:center">1074.881 MFLOPS</td>
+<td style="text-align:center">1224.900  MFLOPS</td>
+<td style="text-align:center">提升了14.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的浮点数性能差异，更加直观</p>
+<center>
+    <img src="data-analysis\whetstone-double-MFLOPS.png" alt="/data-analysis/whetstone-double-MFLOPS.png">
+</center>
+<p>whetstone-double 的 <strong>C 语言函数测量结果</strong>如下表所示，<strong>单位 MOPS(Million Operations Per Second ,处理器每秒钟可进行多少百万次操作</strong>)。对于 N3，N4，N5，N8 来说，g8a 比 g7a 性能分别提升 15.3%，15.1%，21.4%，13.1%，而 N7 下降了 4.4% 。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Loop content</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">N3 if then else</td>
+<td style="text-align:center">19080.695 MOPS</td>
+<td style="text-align:center">22005.533 MOPS</td>
+<td style="text-align:center">提升了15.3%</td>
+</tr>
+<tr>
+<td style="text-align:center">N4 fixed point</td>
+<td style="text-align:center">792329984.007 MOPS</td>
+<td style="text-align:center">911820032.008 MOPS</td>
+<td style="text-align:center">提升了15.1%</td>
+</tr>
+<tr>
+<td style="text-align:center">N5 sin,cos etc.</td>
+<td style="text-align:center">199.383 MOPS</td>
+<td style="text-align:center">241.970  MOPS</td>
+<td style="text-align:center">提升了21.4%</td>
+</tr>
+<tr>
+<td style="text-align:center">N7 assignments</td>
+<td style="text-align:center">3219.166 MOPS</td>
+<td style="text-align:center">3076.056  MOPS</td>
+<td style="text-align:center">下降了4.4%</td>
+</tr>
+<tr>
+<td style="text-align:center">N8 exp,sqrt etc.</td>
+<td style="text-align:center">165.363 MOPS</td>
+<td style="text-align:center">187.031 MOPS</td>
+<td style="text-align:center">提升了13.1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的 C 函数性能差异，更加直观</p>
+<center>
+    <img src="data-analysis\whetstone-double-MOPS.png" alt="/data-analysis/whetstone-double-MOPS.png">
+</center>
+<p>可以发现对于 N7 assignments ，g8a 相比于 g7a 出现了性能的下降，但是具体的原因仅从目前的信息无法推断，可见下一步要实现的 Function-Level topdown 工具的必要性。</p>
+<h3 id="653-file-copy">6.5.3. File Copy </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0 ./pgms/fstime 
+</code></pre><h4 id="a-跑分结果-3">A. 跑分结果 </h4>
+<p>下表表示对于单项测试 File Copy ，g8a 的文件传输速率显著多于 g7a 。对于不同的 bufsize 和 maxblocks ，速率分别提升了 32.3%，33.3%，30.1% 。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">File Copy 1024 bufsize 2000 maxblocks</td>
+<td style="text-align:center">1923395.9/KBps</td>
+<td style="text-align:center">2542943.8/KBps</td>
+<td style="text-align:center">提升了32.3%</td>
+</tr>
+<tr>
+<td style="text-align:center">File Copy 256 bufsize 500 maxblocks</td>
+<td style="text-align:center">522903.0/KBps</td>
+<td style="text-align:center">697050.0/KBps</td>
+<td style="text-align:center">提升了33.3%</td>
+</tr>
+<tr>
+<td style="text-align:center">File Copy 4096 bufsize 8000 maxblocks</td>
+<td style="text-align:center">5584873.2/KBps</td>
+<td style="text-align:center">7266549.7/KBps</td>
+<td style="text-align:center">提升了30.1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的文件传输速率差异，更加直观</p>
+<center>
+    <img src="data-analysis\FileCopy-unixbench.png" alt="/data-analysis/FileCopy-unixbench.png">
+</center>
+<p>下表表示对于单项测试 File Copy ，g8a 的文件读，写，复制速率显著多于 g7a ，速率分别提升了 36.8%，26.6%，35.9% 。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Write</td>
+<td style="text-align:center">3260610/KBps</td>
+<td style="text-align:center">4462051/KBps</td>
+<td style="text-align:center">提升了36.8%</td>
+</tr>
+<tr>
+<td style="text-align:center">Read</td>
+<td style="text-align:center">5052315/KBps</td>
+<td style="text-align:center">6397165/KBps</td>
+<td style="text-align:center">提升了26.6%</td>
+</tr>
+<tr>
+<td style="text-align:center">Copy</td>
+<td style="text-align:center">1869689/KBps</td>
+<td style="text-align:center">2540950/KBps</td>
+<td style="text-align:center">提升了35.9%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的文件读，写，复制速率差异，更加直观</p>
+<center>
+    <img src="data-analysis\FileCopy.png" alt="/data-analysis/FileCopy.png">
+</center>
+<h3 id="654-pipe-throughput">6.5.4. Pipe Throughput </h3>
+<p>由于在实际编程中没有对应的存在，暂不进行分析。</p>
+<h3 id="655pipe-based-context-switching">6.5.5.Pipe-based Context Switching </h3>
+<p>采用 2 CPU 模式进行性能分析</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0-1 ./pgms/context1 5
+</code></pre><h4 id="a-跑分结果-4">A. 跑分结果 </h4>
+<p>下表表示对于单项测试 Pipe-based Context Switching ，g8a 每秒循环数略低于 g7a ，并且从一个循环所需的纳秒计算，<strong>g8a 比 g7a 性能降低 20.1%</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lps</td>
+<td style="text-align:center">COUNT/977707/1/lps</td>
+<td style="text-align:center">COUNT/814090/1/lps</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">spl</td>
+<td style="text-align:center">1022.8 ns</td>
+<td style="text-align:center">1228.4 ns</td>
+<td style="text-align:center">降低了20.1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="b-flamegrpah-的热点函数">B. FlameGrpah 的热点函数 </h4>
+<p>g7a-context1-cpu0-1：</p>
+<center>
+    <img src="image\g7a-context1-cpu0-1.png" alt="/image/g7a-context1-cpu0-1.png">
+</center>
+<p>g8a-context1-cpu0-1：</p>
+<center>
+    <img src="image\g8a-context1-cpu0-1.png" alt="/image/g8a-context1-cpu0-1.png">
+</center>
+<p>根据 FlameGraph 显示，单项测试 Pipe-based Context Switching 占 CPU 占比较高的函数如下：</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<p>_raw_spin_unlock_irqrestore 和 finish_task_switch 性能分别提升 38.5%，41.6%；<br>
+copy_page_from_iter_iovec 和 syscall_enter_from_user_mode(write 栈)性能各下降 5.86 倍，5.16 倍。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_raw_spin_unlock_irqrestore</td>
+<td style="text-align:center">344.5 ns（33.68%）</td>
+<td style="text-align:center">212.0 ns（17.26%）</td>
+<td style="text-align:center">提升了38.5%</td>
+</tr>
+<tr>
+<td style="text-align:center">copy_page_from_iter_iovec</td>
+<td style="text-align:center">13.2 ns（1.29%）</td>
+<td style="text-align:center">90.5 ns（7.37%）</td>
+<td style="text-align:center">下降了5.86倍</td>
+</tr>
+<tr>
+<td style="text-align:center">syscall_enter_from_user_mode(write栈)</td>
+<td style="text-align:center">17.1 ns（1.67%）</td>
+<td style="text-align:center">105.4 ns（8.58%）</td>
+<td style="text-align:center">下降了5.16倍</td>
+</tr>
+<tr>
+<td style="text-align:center">finish_task_switch</td>
+<td style="text-align:center">242.9 ns（23.75%）</td>
+<td style="text-align:center">141.8 ns（11.54%）</td>
+<td style="text-align:center">提升了41.6%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的管道上下文切换性能差异，更加直观</p>
+<center>
+    <img src="data-analysis\Pipe-based-Context-Switching.png" alt="/data-analysis/Pipe-based-Context-Switching.png">
+</center>
+<p>这是继 N7 assignments 之后第二次出现 g8a 相比于 g7a 显示出性能下降，通过计算，不难发现，尽管 g8a 在占比较高的热点函数上出现了性能的提升，但是在占比较小的一些函数上出现了严重的性能下降，要进一步分析原因，需要实现函数级别的 topdown 来辅助分析。</p>
+<h3 id="656-process-creation">6.5.6. Process Creation </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0 ./pgms/spawn 5
+</code></pre><h4 id="a-跑分结果-5">A. 跑分结果 </h4>
+<p>下表表示对于单项测试 Process Creation ，g8a 每秒循环数略高于 g7a ，并且从一个循环所需的纳秒计算，<strong>g8a 比 g7a 性能提升了 11.2%</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lps</td>
+<td style="text-align:center">COUNT/42644/1/lps</td>
+<td style="text-align:center">COUNT/48016/1/lps</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">spl</td>
+<td style="text-align:center">23,450.0 ns</td>
+<td style="text-align:center">20,826.4 ns</td>
+<td style="text-align:center">提升了11.2%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="b-flamegraph-的热点函数-2">B. FlameGraph 的热点函数 </h4>
+<p>g7a-spawn：</p>
+<center>
+    <img src="image\g7a-spawn.png" alt="/image/g7a-spawn.png">
+</center>
+<p>g8a-spawn：</p>
+<center>
+    <img src="image\g8a-spawn.png" alt="/image/g8a-spawn.png">
+</center>
+<p>而根据 FlameGraph 显示，单项测试 Process Creation 占 CPU 占比较高的函数如下：</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>copy_process</strong></td>
+<td style="text-align:center">7171.0 ns ns（30.58%）</td>
+<td style="text-align:center">9798.6 ns（47.05%）</td>
+<td style="text-align:center">下降了36.6%</td>
+</tr>
+<tr>
+<td style="text-align:center">dup_mm</td>
+<td style="text-align:center">1308.5 ns（5.58%）</td>
+<td style="text-align:center">1678.6 ns（8.06%）</td>
+<td style="text-align:center">下降了28.3%</td>
+</tr>
+<tr>
+<td style="text-align:center">perf_event_fork</td>
+<td style="text-align:center">675.4 ns（2.88%）</td>
+<td style="text-align:center"><strong>210.3</strong> ns（1.01%）</td>
+<td style="text-align:center">提升了2.21倍</td>
+</tr>
+<tr>
+<td style="text-align:center">perf_event_init_task</td>
+<td style="text-align:center">3428.4 ns（14.62%）</td>
+<td style="text-align:center">6293.6 ns（30.22%）</td>
+<td style="text-align:center">下降了83.6%</td>
+</tr>
+<tr>
+<td style="text-align:center">proc_fork_connector</td>
+<td style="text-align:center">1172.5 ns（5.0%）</td>
+<td style="text-align:center"><strong>868.4</strong> ns（4.17%）</td>
+<td style="text-align:center">提升了25.9%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>exit_mm(mmput)</strong></td>
+<td style="text-align:center">8882.9 ns (37.88%)</td>
+<td style="text-align:center"><strong>2974.0</strong> ns (14.82%)</td>
+<td style="text-align:center">提升了66.5%</td>
+</tr>
+<tr>
+<td style="text-align:center">free_pgtables</td>
+<td style="text-align:center">1313.2 ns (5.56%)</td>
+<td style="text-align:center"><strong>299.9</strong> ns (1.44%)</td>
+<td style="text-align:center">提升了77.2%</td>
+</tr>
+<tr>
+<td style="text-align:center">tlb_finish_mmu</td>
+<td style="text-align:center">3787.2 ns (16.15%)</td>
+<td style="text-align:center"><strong>1018.4</strong> ns (4.89%)</td>
+<td style="text-align:center">提升了73.1%</td>
+</tr>
+<tr>
+<td style="text-align:center">unmap_vmas</td>
+<td style="text-align:center">3020.36 ns (12.88%)</td>
+<td style="text-align:center"><strong>1347.5</strong> ns (6.47%)</td>
+<td style="text-align:center">提升了55.4%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的 Process Creation 热点函数时间差异，更加直观，下图是两个热点调用栈 copy_process和exit_mm 所有的热点函数放在一起的时间差异：</p>
+<center>
+    <img src="data-analysis\Process-Creation-All-in-one.png" alt="/data-analysis/Process-Creation-All-in-one.png">
+</center>
+<p>下图显示的是两个热点调用栈的时间差异，可以发现，<strong>对于 copy_process 调用栈来说，g8a 的性能不如 g7a ，但在 exit_mm 调用栈上，g8a 的运行时间显著低于 g7a</strong> 。最终造成了 g8a 相比于 g7a 性能提升了11.2的结果。</p>
+<center>
+    <img src="data-analysis\Process-Creation.png" alt="/data-analysis/Process-Creation.png">
+</center>
+<p>下图显示的是 copy_process 调用栈的热点函数时间差异，是 Process Creation 热点函数的子集</p>
+<center>
+    <img src="data-analysis\Process-Creation-copy-process.png" alt="/data-analysis/Process-Creation-copy-process.png">
+</center>
+<p>下图显示的是 exit_mm 调用栈的热点函数时间差异，是 Process Creation 热点函数的子集</p>
+<center>
+    <img src="data-analysis\Process-Creation-exit_mm.png" alt="/data-analysis/Process-Creation-exit_mm.png">
+</center>
+<h3 id="657-system-call-overhead">6.5.7. System Call Overhead </h3>
+<h4 id="a-mix">A. mix </h4>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0 ./pgms/syscall 5 mix
+</code></pre><h5 id="a-跑分结果-6">a. 跑分结果 </h5>
+<p>下表表示对于单项测试 Syscall mix ，g8a 每秒循环数显著高于 g7a ，并且从一个循环所需的纳秒计算，g8a 比 g7a 性能提升了 16.2%。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lps</td>
+<td style="text-align:center">COUNT/16,300,909/1/lps</td>
+<td style="text-align:center">COUNT/19,456,323/1/lps</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">spl</td>
+<td style="text-align:center">61.3 ns</td>
+<td style="text-align:center">51.4 ns</td>
+<td style="text-align:center">提升了16.2%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="b-flamegraph-的热点函数-3">b. FlameGraph 的热点函数 </h5>
+<p>g7a-syscall-mix：</p>
+<center>
+    <img src="image\g7a-syscall-mix.png" alt="/image/g7a-syscall-mix.png">
+</center>
+<p>g8a-syscall-mix：</p>
+<center>
+    <img src="image\g8a-syscall-mix.png" alt="/image/g8a-syscall-mix.png">
+</center>
+<p>而根据 FlameGraph 显示，单项测试 Syscall mix 占 CPU 占比较高的调用栈如下：</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_GI_dup</td>
+<td style="text-align:center">14.9ns(24.30%)</td>
+<td style="text-align:center">12.1ns(23.55%)</td>
+<td style="text-align:center">提升了18.8%</td>
+</tr>
+<tr>
+<td style="text-align:center">_GI_getuid</td>
+<td style="text-align:center">10.4ns(16.95%)</td>
+<td style="text-align:center">9.1ns(17.65%)</td>
+<td style="text-align:center">提升了12.5%</td>
+</tr>
+<tr>
+<td style="text-align:center">_GI_unmask</td>
+<td style="text-align:center">9.9ns(16.2%)</td>
+<td style="text-align:center">8.4ns(16.31%)</td>
+<td style="text-align:center">提升了15.2%</td>
+</tr>
+<tr>
+<td style="text-align:center">_close</td>
+<td style="text-align:center">12.3ns(20.05%)</td>
+<td style="text-align:center">10.5ns(20.37%)</td>
+<td style="text-align:center">提升了14.6%</td>
+</tr>
+<tr>
+<td style="text-align:center">getpid</td>
+<td style="text-align:center">11.0ns(17.92%)</td>
+<td style="text-align:center">9.1ns(17.65%)</td>
+<td style="text-align:center">提升了17.3%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的 Syscall mix 热点调用栈的时间差异，更加直观</p>
+<center>
+    <img src="data-analysis\syscall-mix.png" alt="/data-analysis/syscall-mix.png">
+</center>
+<p>而根据 FlameGraph 显示，单项测试 Syscall mix 占 CPU 占比较高的函数如下：</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">sys_enter_from_user_mode(_GI_dup)</td>
+<td style="text-align:center">5.8ns(9.49%)</td>
+<td style="text-align:center">5.2ns(10.08%)</td>
+</tr>
+<tr>
+<td style="text-align:center">sys_enter_from_user_mode(_GI_getuid)</td>
+<td style="text-align:center">5.7ns(9.36%)</td>
+<td style="text-align:center">5.1ns(9.91%)</td>
+</tr>
+<tr>
+<td style="text-align:center">sys_enter_from_user_mode(_GI_unmask)</td>
+<td style="text-align:center">5.9ns(9.64%)</td>
+<td style="text-align:center">4.8ns(9.28%)</td>
+</tr>
+<tr>
+<td style="text-align:center">sys_enter_from_user_mode(_close)</td>
+<td style="text-align:center">5.7ns(9.34%)</td>
+<td style="text-align:center">4.7ns(9.13%)</td>
+</tr>
+<tr>
+<td style="text-align:center">sys_enter_from_user_mode(getpid)</td>
+<td style="text-align:center">6.0ns(9.75%)</td>
+<td style="text-align:center">5.0ns(9.65%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的 Syscall mix 热点函数的时间差异，更加直观</p>
+<center>
+    <img src="data-analysis\syscall-mix-with-sysenterfromusermode.png" alt="/data-analysis/syscall-mix-with-sysenterfromusermode.png">
+</center>
+<h4 id="b-close">B. close </h4>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0 ./pgms/syscall 5 close
+</code></pre><h5 id="a-跑分结果-7">a. 跑分结果 </h5>
+<p>下表表示对于单项测试 Syscall close ，g8a 每秒循环数显著高于 g7a ，并且从一个循环所需的纳秒计算，g8a 比 g7a 性能提升了 15.2% 。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lps</td>
+<td style="text-align:center">COUNT/36,130,963/1/lps</td>
+<td style="text-align:center">COUNT/42,606,230/1/lps</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">spl</td>
+<td style="text-align:center">27.7ns</td>
+<td style="text-align:center">23.5ns</td>
+<td style="text-align:center">提升了15.2%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="b-flamegraph-的热点函数-4">b. FlameGraph 的热点函数 </h5>
+<p>g7a-syscall-close：</p>
+<center>
+    <img src="image\g7a-syscall-close.png" alt="/image/g7a-syscall-close.png">
+</center>
+<p>g8a-syscall-close：</p>
+<center>
+    <img src="image\g8a-syscall-close.png" alt="/image/g8a-syscall-close.png">
+</center>
+<p>而根据 FlameGraph 显示，单项测试 Syscall close 占 CPU 占比较高的函数如下：</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_<em>x64_sys_dup</em>(_GI_dup)</td>
+<td style="text-align:center">5.1ns(18.39%)</td>
+<td style="text-align:center">4.7ns(20.11%)</td>
+<td style="text-align:center">提升了7.8%</td>
+</tr>
+<tr>
+<td style="text-align:center">sys_enter_from_user_mode(_GI_dup)</td>
+<td style="text-align:center">5.9ns(21.42%)</td>
+<td style="text-align:center">5.0ns(21.28%)</td>
+<td style="text-align:center">提升了15.3%</td>
+</tr>
+<tr>
+<td style="text-align:center">_<em>x64_sys_close</em></td>
+<td style="text-align:center">3.1ns(11.06%)</td>
+<td style="text-align:center">2.2ns(9.52%)</td>
+<td style="text-align:center">提升了29.0%</td>
+</tr>
+<tr>
+<td style="text-align:center">sys_enter_from_user_mode(_close)</td>
+<td style="text-align:center">5.9ns(21.28%)</td>
+<td style="text-align:center">5.0ns(21.27%)</td>
+<td style="text-align:center">提升了15.3%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的 Syscall close 热点函数的时间差异，更加直观</p>
+<center>
+    <img src="data-analysis\syscall-close.png" alt="/data-analysis/syscall-close.png">
+</center>
+<h4 id="c-getpid">C. getpid </h4>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0 ./pgms/syscall 5 getpid
+</code></pre><h5 id="a-跑分结果-8">a. 跑分结果 </h5>
+<p>下表表示对于单项测试 Syscall getpid ，g8a 每秒循环数显著高于 g7a ，并且从一个循环所需的纳秒计算，g8a 比 g7a 性能提升了 14.8%。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lps</td>
+<td style="text-align:center">COUNT/87,278,524/1/lps</td>
+<td style="text-align:center">COUNT/102,398,498/1/lps</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">spl</td>
+<td style="text-align:center">11.5ns</td>
+<td style="text-align:center">9.8ns</td>
+<td style="text-align:center">提升了14.8%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="b-flamegraph-的热点函数-5">b. FlameGraph 的热点函数 </h5>
+<p>g7a-syscall-getpid：</p>
+<center>
+    <img src="image\g7a-syscall-getpid.png" alt="/image/g7a-syscall-getpid.png">
+</center>
+<p>g8a-syscall-getpid：</p>
+<center>
+    <img src="image\g8a-syscall-getpid.png" alt="/image/g8a-syscall-getpid.png">
+</center>
+<p>而根据 FlameGraph 显示，单项测试 Syscall getpid 占 CPU 占比较高的函数如下：</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_getpid</td>
+<td style="text-align:center">2.9ns(25.29%)</td>
+<td style="text-align:center">2.6ns(26.26%)</td>
+<td style="text-align:center">提升了10.3%</td>
+</tr>
+<tr>
+<td style="text-align:center">_x64_sys_getpid</td>
+<td style="text-align:center">1.7ns(14.82%)</td>
+<td style="text-align:center">1.4ns(14.64%)</td>
+<td style="text-align:center">提升了17.6%</td>
+</tr>
+<tr>
+<td style="text-align:center">sys_enter_from_user_mode</td>
+<td style="text-align:center">6.0ns(51.81%)</td>
+<td style="text-align:center">4.9ns(50.35%)</td>
+<td style="text-align:center">提升了18.3%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的 Syscall getpid 热点函数的时间差异，更加直观</p>
+<center>
+    <img src="data-analysis\syscall-getpid.png" alt="/data-analysis/syscall-getpid.png">
+</center>
+<h4 id="c-exec">C. exec </h4>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>&lt;command&gt;:perf record -g taskset -c 0 ./pgms/syscall 5 exec
+</code></pre><h5 id="a-跑分结果-9">a. 跑分结果 </h5>
+<p>下表表示对于单项测试 Syscall exec ，g8a 每秒循环数显著高于 g7a，并且从一个循环所需的纳秒计算，g8a 比 g7a 性能提升了 21.1%。</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lps</td>
+<td style="text-align:center">COUNT/15,146/1/lps</td>
+<td style="text-align:center">COUNT/19,187/1/lps</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">spl</td>
+<td style="text-align:center">66024.0ns</td>
+<td style="text-align:center">52118.6ns</td>
+<td style="text-align:center">提升了21.1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="b-flamegraph-的热点函数-6">b. FlameGraph 的热点函数 </h5>
+<p>g7a-syscall-exec：</p>
+<center>
+    <img src="image\g7a-syscall-exec.png" alt="/image/g7a-syscall-exec.png">
+</center>
+<p>g8a-syscall-exec：</p>
+<center>
+    <img src="image\g8a-syscall-exec.png" alt="/image/g8a-syscall-exec.png">
+</center>
+<p>而根据 FlameGraph 显示，<strong>g8a 比 g7a 多两个 do_syscall_64 的栈，一个是 kernel_clone ，一个是 do_group_exit</strong>。</p>
+<p>单项测试 Syscall exec 占 CPU 占比较高的函数如下：</p>
+<p><strong>下表中的括号内表示该函数在一次循环中的 cpu 时间占比。</strong></p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">g7a</th>
+<th style="text-align:center">g8a</th>
+<th style="text-align:center">性能变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">do_lookup_</td>
+<td style="text-align:center">5552.6ns(8.41%)</td>
+<td style="text-align:center">2095.2ns(4.02%)</td>
+<td style="text-align:center">提升了62.3%</td>
+</tr>
+<tr>
+<td style="text-align:center">strcmp</td>
+<td style="text-align:center">4918.8ns(7.45%)</td>
+<td style="text-align:center">740.1ns(1.42%)</td>
+<td style="text-align:center">提升了85.0%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>_<em>dlsysdep_start</em></strong></td>
+<td style="text-align:center">40116.2ns(60.76%)</td>
+<td style="text-align:center">12086.3ns(23.19%)</td>
+<td style="text-align:center">提升了69.9%</td>
+</tr>
+<tr>
+<td style="text-align:center">_ctype_init</td>
+<td style="text-align:center">5526.2ns(8.37%)</td>
+<td style="text-align:center">271.0ns(0.52%)</td>
+<td style="text-align:center">提升了95.1%</td>
+</tr>
+<tr>
+<td style="text-align:center">_libc_early_init</td>
+<td style="text-align:center">8933.0ns(13.53%)</td>
+<td style="text-align:center">677.5ns(1.30%)</td>
+<td style="text-align:center">提升了92.4%</td>
+</tr>
+<tr>
+<td style="text-align:center">dl_main</td>
+<td style="text-align:center">13224.6ns(20.03%)</td>
+<td style="text-align:center">9183.3ns(17.62%)</td>
+<td style="text-align:center">提升了30.6%</td>
+</tr>
+<tr>
+<td style="text-align:center">munmap</td>
+<td style="text-align:center">12069.2ns(18.28%)</td>
+<td style="text-align:center">740.1ns(1.42%)</td>
+<td style="text-align:center">提升了93.9%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>用图表表示 g8a 与 g7a 的 Syscall exec 热点函数的时间差异，更加直观</p>
+<center>
+    <img src="data-analysis\syscall-exec.png" alt="/data-analysis/syscall-exec.png">
+</center>
+<p>g8a 比 g7a 多两个 do_syscall_64 的栈，一个是 kernel_clone ，一个是 do_group_exit 。但是不论是整体用时还是调用栈热点函数的用时都有显著的减少，这可能和新增加的调用栈有关。</p>
+<p>数据分析文档见 <a href="data_analysis.md">data_analysis.md</a></p>
+<h2 id="66-使用-ris-工具分析比较">6.6. 使用 RIS 工具分析比较 </h2>
+<p>以 Pipe-based Context Switching 单项测试为例，看看 RIS 是如何对 perf 的采样结果进行处理的。</p>
+<p>在 g8a 裸金属环境下，运行如下命令：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>cd /root/UnixBench-5.1.3/UnixBench5.1.3
+
+perf record -e cycles,r430076,r1004301A0,r4307AA,r4300C1,r100431EA0,r1004360A0,r4300C1  -g taskset -c 0-1 ./pgms/context1 5
+
+perf script -i perf.data &amp;&gt; perf.unfold
+
+cp perf.unfold /root/go/src/code
+
+cd /root/go/src/code
+
+go run calltree.go funclist.go main.go perf.go
+</code></pre><p>运行结果如下图所示</p>
+<center>
+    <img src="image-exp\context1-RIS.png" alt="context1-RIS">
+</center>
+<p>将此结果保存到 <code>result.log</code>中，便可以查找我们想要的函数</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Total_front    Total_back    Total_badspec    Total_retired    Symbol
+     46.61%        20.76%          -11.15%           43.48%    _raw_spin_unlock_irqrestore
+     83.88%         4.96%          -21.22%           35.30%    copy_page_from_iter_iovec
+     75.26%        10.33%           -9.65%           17.69%    syscall_enter_from_user_mode
+     52.62%        15.04%          -14.06%           30.27%    finish_task_switch
+
+Self_front    Self_back    Self_badspec    Self_retired    Symbol
+    46.31%       20.72%         -11.14%          43.72%    _raw_spin_unlock_irqrestore
+    95.34%        5.29%         -23.49%          38.69%    copy_page_from_iter_iovec
+    74.35%        8.09%         -12.53%          17.33%    syscall_enter_from_user_mode
+    54.44%        5.25%         -13.02%          30.47%    finish_task_switch
+</code></pre><p>首先可以看到因为这四个热点函数都是栈顶的函数，所以他们的total计数和self计数的topdown分析结果是相似的。</p>
+<p>其次可以看到 copy_page_from_iter_iovec 和 syscall_enter_from_user_mode 都是 Frontend Bound 占比最大，Backend 的影响较小，错误预测的影响也较小，正常退休的指令数较少。</p>
+<p>一般来讲这样的结果说明函数还可以在<strong>指令预取</strong>方面进行优化。不过这两个都属操作系统内核函数。所以只起到分析的效果。</p>
+<p>另外由于 g7a 的环境对于RIS需要的perf_event事件存在部分计数器缺失的问题，所以无法在 g7a 上运行RIS。这是由 g7a 的硬件条件决定的。</p>
+<h1 id="7遇到的主要问题和分析方法">7.遇到的主要问题和分析方法 </h1>
+<h2 id="71-调研中的问题">7.1. 调研中的问题 </h2>
+<h3 id="711-问题对-topdown-进行调研时顶层分类方法很难理解">7.1.1. 问题：对 topdown 进行调研时，顶层分类方法很难理解 </h3>
+<ul>
+<li>topdown 分析方法最早是由 Intel 公司提出的，并对 Intel CPU 做了硬件支持。要理解 topdown 的分析思路，需要深刻的理解计算机系统结构里的指令流水线，理解指令在流水线中的生命周期，才能理解 topdown 顶层基于指令流水线的分类方法。</li>
+<li>同时需要理解指令流水线对应的 cpu 部件与指令流向，对于硬件架构图的理解可以帮助自己理解 topdown 中的前端与后端。</li>
+</ul>
+<h3 id="712-问题对-perf-调研时采样和计数模式的工作原理以及进程切换-中断对他们的影响">7.1.2. 问题：对 perf 调研时，采样和计数模式的工作原理以及进程切换、中断对他们的影响 </h3>
+<p>这个需要自己实际在服务器上运行 perf 命令，多实践，帮助理解工作原理和区别所在。</p>
+<ul>
+<li>工作原理<br>
+统计模式：<code>perf stat</code>，更偏向于硬件<br>
+采样模式： <code>perf record</code>，可以对选定的事件进行特定频率的采样，负载更高</li>
+<li>进程切换和中断的影响<br>
+取决于 perf 的工作模式：<code>per-thread</code>, <code>per-process</code>, <code>per-cpu</code><br>
+<code>per-thread</code>: 进程只要被切换出去，计数就会停止，如果线程从一个处理器迁移到另一个处理器时 thread migrated from one processor to another，计数器将保存在当前处理器上，并在新处理器上还原。<br>
+<code>per-process</code>：进程的所有线程都会被计数，然后进行聚合，所以可以看作 <code>per-thread</code> 的变体<br>
+<code>per-cpu</code>： 会监视指定 cpu 上运行的所有的线程，这时候进程切换就不会影响计数。</li>
+</ul>
+<h2 id="72-unixbench-测试中的问题">7.2. Unixbench 测试中的问题 </h2>
+<h3 id="721-问题在进行-unixbench-测试时不熟悉单项测试如何进行">7.2.1. 问题：在进行 UnixBench 测试时，不熟悉单项测试如何进行 </h3>
+<ul>
+<li>前期调研 UnixBench ，能搜集到的资料基本只关注 UnixBench 整体跑分，而不关注 UnixBench 的单项测试，这方面资料较少。</li>
+<li>但是其实只要了解 UnixBench 源码结构，就会发现 UnixBench 是一些 <code>.c</code> 文件, <code>./Run</code> 也只是一个方便的脚本文件，想要跑单个文件，只要找到单项测试的二进制可执行文件就可以了，在 UnixBench 目录下的 <code>/pgms</code> 文件夹下面。</li>
+</ul>
+<h3 id="722-问题在测试-context1-时遇到了单-cpu-和多-cpu-测试结果不同的情况">7.2.2. 问题：在测试 context1 时，遇到了单 cpu 和多 cpu 测试结果不同的情况 </h3>
+<ul>
+<li>原因：context1 是个多线程测试，所以单 cpu 会影响测试结果，经过实践显示。4 CPU 与 2 CPU 效果相同，为了避免不必要的 cpu 迁移，对 2 CPU 进行分析。</li>
+<li>之所以会发现这个问题，是因为 Pipe-based Context Switching 单项测试结果 <code>/FlameGraph/g7a-context1.svg</code> 显示的 write 和 read 调用栈的 cpu 占比悬殊。</li>
+<li>在重新运行 perf record 的同时，运行命令 <code>mpstat -P 0-3 1</code> 查看 CPU0，1，2，3 的利用率，发现单 CPU 利用率拉满，而 4 CPU 的利用率与 2 CPU 利用率相似。</li>
+</ul>
+<h2 id="73-数据处理分析中的问题">7.3. 数据处理分析中的问题 </h2>
+<h3 id="731-问题在用-perf-记录-flamegraph-可视化之后不知道如何进行下一步分析">7.3.1. 问题：在用 perf 记录、FlameGraph 可视化之后，不知道如何进行下一步分析 </h3>
+<ul>
+<li>在和指导老师沟通交流之后，学会了结合 perf 记录结果和 FlameGraph 调用栈的 CPU 占比来计算性能数据</li>
+<li>通过处理 perf 记录结果得到经历一次循环的时间，再结合 FlameGraph 的 cpu 时间占比计算每次循环中某个函数调用花费的时间。</li>
+</ul>
+<h2 id="74-调研-amd-topdown-计算公式中的问题">7.4. 调研 AMD topdown 计算公式中的问题 </h2>
+<h3 id="741-g7a-系列不能正确的采集到需要的事件">7.4.1. g7a 系列不能正确的采集到需要的事件 </h3>
+<p>硬件问题，在计算 topdown 时，发现有些 event 类型缺失，没有采集到。</p>
+<p>解决方法是更换实验环境，配置的 g8a 裸金属环境可以采集到所有需要的 event 类型</p>
+<h2 id="75-perf解析器中的问题">7.5. perf解析器中的问题 </h2>
+<h3 id="751-字符串处理的方式选择问题">7.5.1. 字符串处理的方式选择问题 </h3>
+<p>字符串处理的方式很多，但是为了在保证 <code>perf.unfold</code> 文件格式正确的情况下进行匹配，以免因格式错误导致匹配到无效的字符串，所以在多次尝试后采用了正则表达式匹配的方法。</p>
+<p>记录第一行的正则匹配，需要匹配的有六个字符串， <code>()</code> 框住要进行匹配的字符串，括号内 <code>.</code> 代表匹配任意一个字符，换行符除外， <code>*</code> 代表匹配任意数量的重复字符， <code>?</code> 表示匹配 0 或者一个重复字符， <code>.*?</code> 可以满足匹配第一行字符的需要， <code>\</code> 是转义字符，<code>\s</code> 表示空格，<code>\s+</code> 表示匹配一个或多个空格， <code>\.</code> 表示匹配字符 <code>.</code> , <code>\:</code> 表示匹配字符 <code>:</code> 。</p>
+<p>下面是匹配记录第一行的正则式：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>//perf 273148 3526443.330912:       1548    r430076:
+compileRegex := regexp.MustCompile(`\A(.*?)\s+(.*?)\s+(.*?)\.(.*?)\:\s+(.*?)\s+(.*?)\:`)
+matchArr := compileRegex.FindStringSubmatch(FirstLine)
+	
+</code></pre><p>下面是匹配调用栈的正则式：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>//ffffffffa9063590 kretprobe_trampoline+0x0 ([kernel.kallsyms])
+compileRegex := regexp.MustCompile(`(.*?)\s+(.*?)\s+\((.*?)\)`)
+matchArr := compileRegex.FindStringSubmatch(line)
+</code></pre><h3 id="752-在-perf-解析器运行时程序会报内存访问错误的-error">7.5.2. 在 perf 解析器运行时，程序会报内存访问错误的 ERROR </h3>
+<p>在 <code>parseEvents</code> 函数运行时，其中匹配字符串后，赋值的部分比如 <code>event.command = matchArr[1]</code> 会报内存访问错误的问题，在调试过程中发现，在 <code>perf.unfold</code> 解析到固定的行数后，会出现这样的问题，此时 <code>matchArr</code> 并没有匹配到任何字符串，所以用数组索引访问会直接报错。</p>
+<p>而没有匹配到字符串的原因，则是 <code>perf.unfold</code> 内部存在部分格式错误，比如</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>ffffffff81c00099 entry_SYSCALL_64_after_hwframe+0x61 ([kernel.kallsy5.851915:     674308    r4300C1:
+</code></pre><p>这是 <code>perf.unfold</code> 文件中完整的一行，可以看到，调用栈的函数信息和下一个记录的事件计数行掺杂在了一起，这样会导致匹配失败，从而造成内存访问错误。</p>
+<p>解决的方法是对 <code>matchArr</code> 长度进行检测，比如事件计数一行有六个字符串要匹配，而 <code>marchArr</code> 如果正确匹配，<code>matchArr[0]</code> 会保存完整的匹配行，也就是 <code>matchArr</code> 一共有七个元素，长度为 7 的 <code>matchArr</code> 是正常的。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>	if len(matchArr) &lt; 7 {
+		log.Printf("Event-err:%s\n", FirstLine)
+		return *event //返回空的event PerfEvent的构造函数要重新写一下
+	}
+</code></pre><p>对于调用栈来说，matchArr 的长度为 4 是合理的</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>	if len(matchArr) &lt; 4 {
+			log.Printf("Stack-err:%s\n", line)
+			continue
+		}
+</code></pre><h3 id="753-在输出-calltreenode-时发现相同的函数没有合并">7.5.3. 在输出 CallTreeNode 时，发现相同的函数没有合并 </h3>
+<p>在介绍 <code>perf.unfold</code> 文件时，介绍了调用栈行的组成，内存地址 + SymbolName + 偏移 + file，但是在匹配的时候，symbolName 和偏移是匹配在一起的，如果要让相同的 symbol 合并那就必须处理掉偏移。</p>
+<p>这是最初没有取消偏移的结示例：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>main.CallTreeNode{
+    info:main.funcInfo{symbolName:"_dl_map_object+0x719", file:"/usr/lib64/ld-2.32.so"}, 
+    ev_count:map[string]int64{"r4300C1":188062}, 
+    Children:[]main.CallTreeNode(nil)}, 
+</code></pre><p>取消偏移后：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>main.CallTreeNode{
+    info:main.funcInfo{symbolName:"_dl_map_object", file:"/usr/lib64/ld-2.32.so"}, 
+    ev_count:map[string]int64{"r4300C1":188062}, 
+    Children:[]main.CallTreeNode(nil)}, 
+</code></pre><p>取消偏移的代码:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>compileRegex = regexp.MustCompile(`(.*?)\++(.*?)`)
+matchArr = compileRegex.FindStringSubmatch(stack.symbolName)
+if len(matchArr) == 3 { //有偏移
+	stack.symbolName = matchArr[1]
+}
+</code></pre><h3 id="754-由于文件部分行格式错误导致的最终结果有细微偏差">7.5.4. 由于文件部分行格式错误导致的最终结果有细微偏差 </h3>
+<p>前面提到内存访问错误的问题时，说到原因是有些行的格式错误，这些错误格式的行会导致部分事件计数丢失，以及个别函数的计数有细微的差别，从而导致与 <code>perf report</code> 的真实结果有细微差别。</p>
+<p>以下是 log 中保存的格式问题(时间和文件信息已隐去)</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Stack-err:ffffffff81c00099 entry_SYSCALL_64_after_hwframe+0([kernel.kallsyms])
+Stack-err:7f4cbde1cf9f __libc_fo[unknown])
+Stack-err:7f4cbde1cf9f __libc_fork+0x4([kernel.kallsyms])
+Stack-err:ffff (/usr/lib64/libc-2.32.so)
+Event-err:spawn 1521032 5450155.621125:    259348260 kmem_cache_alloc_trace+0x220 ([kernel.kallsyms])
+Stack-err:ffffffff8128ac96 inherit_eve3462 r100431EA0:
+Stack-err:ffffffff81llsyms])
+Stack-err:ffffffff8128ab87 inherit_event.constp.kallsyms])
+Stack-err:ffffffffrop.0+0x47 ([kernel.kallsyms])
+Stack-err:ffffffff810eernel.kallsyms])
+Stack-err:ffffffff81c00099 entry_SYSCALL_64_after_hwframe+0x61 ([kernel.kallsy5.851915:     674308    r4300C1:
+Event-err:spawn 1521032 545015
+Stack-err:__mmdrop+0x61 ([kernel.kallsyms])
+Stack-err:ffffffff810e4451x96 ([kernel.kallsyms])
+Stack-err:fffff_64+0x33 ([kernel.kallsyms])
+Stack-err:ffffffff81ad99e3 do_syscalllib64/libc-2.32.so)
+Stack-err:ffffffff81282525 perf_tryllsyms])
+Stack-err:ffffffff81c00099 entry_SYSCALL_64_after_hwfr2 5450156.000308:     594257     cycles:
+Event-err:spawn 152103ame+0x61 ([kernel.kallsyms])
+Stack-err:ffffffff81ad99e3 do_[kernel.kallsyms])
+Stack-err:ffffffff810e7fnel.kallsyms])
+Stack-err:_after_hwframe+0x61 ([kernel.kallsyms])
+Stack-err:7f4cbde1cf9f __libc_fork+0x4f.kallsyms])
+Stack-err:ffffffff81615eb9 memsekernel.kallsyms])
+Stack-err:7f4c4 ([kernel.kallsyms])
+Stack-err:ffffffff81615eb9 memset_erms+kallsyms])
+Stack-err:ffffff61 ([kernel.kallsyms])
+Event-err:spawn ff810e6e06 copy_process+0x636 ([kernel.kallsyms])
+Stack-err:ffffffff81c00099 entry_SYSCALL_64_after_hwframe+0x1521032 5450156.343372:     621775     cycles:
+Stack-err:ffffffff810e6.kallsyms])
+Stack-err:fffkernel_clone+0x8b ([kernel.kallsyms])
+Event-err:spawn 1521032 54501el.kallsyms])
+Stack-err:ffffffff81ad99e3 do_syscall_64+0x33 ([kernel.56.791585:     713270    r4300C1:
+Stack-err:ffffffff81adc4d6 sysvec_apic_timer_interrupt+0x36libc-2.32.so)
+Stack-err:ffffffff81615e+0x61 ([kernel.kallsyms])
+Stack-err:ffffffff81286ae1 perf_event_allsyms])
+Stack-err:fffffy_SYSCALL_64_after_hwframe+0x61 ([kernel.kallsyms])
+Event-err:spawn 1521032 5450157.759425: fff810ee924 __x64_sys_exit_group+0x14 ([kernel.kallsyms])
+Stack-err:ffffffff81c00099 entr    802322    r430076:
+Stack-err:ffffffff81348214 kmem_cache_alloc_trnel.kallsyms])
+Event-err:spawn 1521032 5450157.964f (/usr/lib64/libc-2.32.so)
+Stack-err:fffff9366:    2496014 r100431EA0:
+Event-err:spawn 1521032l.kallsyms])
+Stack-err:5450157.997421:    2593462 r100431EA0:
+Stack-err:ffffffff81kallsyms])
+Stack-err:fffffel.kallsyms])
+Stack-err:ffffffff8lsyms])
+Stack-err:ffffffff81ad99e3group.isra.0+0x1b ([kernel.kallsyms])
+Stack-err:fffff)
+Stack-err:ffffffff812vent_init_context+0x13a ([kernel.kallsyms])
+Stack-err:ffffffff8128b00a perf_eernel.kallsyms])
+Event-err:spawn 1521032 .0+0x156 ([kernel.kallsyms])
+Stack-err:ffffffff810e8275450158.581384:    1639150 r1004301A0:
+Stack-err:fffffffllsyms])
+Event-err:spawrnel.kallsyms])
+Stack-err:fffffn 1521032 5450158.781896:     667454    r4300C1:
+Stack-err:ffffffff8111dopy_process+0x636 ([kernel.kallsyms])
+Stack-err:ffffffff810e6e06 csyms])
+Stack-err:ffffffff81l.kallsyms])
+Stack-err:ernel.kallsyms])
+Event-err:spawn 1521032 54501task+0x51 ([kernel.kallsyms])
+Stack-err:7f4cbde1cf9f __libc_fork+0x4f (/us59.434484:       2913    r4300C1:
+Stack-err:ffffffff8128fcf1 perf_event_init_r/lib64/libc-2.32.so)
+Stack-err:ffffffff81c00099 entry_SYSCALL_64_after_hwfram([kernel.kallsyms])
+Stack-err:fffffffopy_process+0x636 ([kernel.kallsyms])
+Stack-err:fffsk+0x51 ([kernel.kallsyms])
+Stack-err:ffffffff81ad99e3 do_syscall_ib64/libc-2.32.so)
+Event-err:spawn 15228291:          1    r4300C1:
+2024/07/24 10:06:52.586679 C:/Users/Lenovo/Desktop/proj244-performance-analysis/code/hello.go:67: Stack-err:ffffffff81ae5354 __schedu42 5450159.746786:    1812121 r1004301A0:
+Event-err:spawn 1521032 5450159.748le+0x1b4 ([kernel.kallsyms])
+Stack-err:ffffffff8_process+0x636 ([kernel.kallsyms])
+Stack-err:ffffffff810e6e06 copyyms])
+Stack-err:ffffffff81ae5666 schedms])
+Stack-err:ffffffff81ad99e3 do_syscrnel.kallsyms])
+Stack-err:ffffffff8128adab inherit_group.isra.0+])
+Event-err:spawn 1521032 5450159.93l.kallsyms])
+Stack-err:ffffffff8128adab inherit_group.isra.0+0x1b ([kernel.kallsyms1399:     802322    r430076:
+Stack-err:ffffffff81006  667454    r4300C1:
+Event-err:spawn 1521032 5450160.097690:   fffffff8128ab87 inherit_event.constprop.0+0x47 ([kernel.kallsyms])
+Stack-err:ffffffff810e8272 __do_sys_clon.kallsyms])
+Stack-err:ffffffff81286de+0x52 ([kernel.kallsyms])
+
+</code></pre><h2 id="76-调用树生成器中的问题">7.6. 调用树生成器中的问题 </h2>
+<h3 id="761-多个文件下的运行命令">7.6.1. 多个文件下的运行命令 </h3>
+<p>调用树生成器是在 <code>CallTree.go</code> 文件中,在直接运行 <code>main.go</code> 时，会报错如下</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>[Running] go run "c:\Users\Lenovo\Desktop\proj244-performance-analysis\code\main.go"
+# command-line-arguments
+code\main.go:130:9: undefined: CallTree
+
+[Done] exited with code=1 in 0.495 seconds
+</code></pre><p>这是因为使用 <code>go run</code> 编译运行指定 go 文件，没有编译 <code>CallTree.go</code> 文件导致的。修改一下编译命令即可正常运行</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>go run ./code/main.go ./code/CallTree.go
+</code></pre><h3 id="762-递归构造与引用传递">7.6.2. 递归构造与引用传递 </h3>
+<p>建树需要递归构造，考虑到一个调用栈一定在树的同一个路径上，因此从调用栈的根节点开始，在树的根节点上搜索，如果有，则返回树的根节点的引用，作为递归构造第一步的父结点的引用，若没有，则创建新的结点，添加到树的根节点列表，同样返回其引用。</p>
+<p>在其余节点的递归构造中，由于子节点需要衔接在父节点的子节点列表上，所以对父节点的修改是需要被保存的，选择引用参数传递的方式保存对父节点的修改。</p>
+<p>引用传递的参数 pa_node ，意为父节点</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (rt *CallTree) Nodes_Handler(pa_node *CallTreeNode /*父节点 引用传递*/, stack_levels []PerfStackFrame, tmp_count int64, tmp_eventTpye string)
+</code></pre><p>递归构造，当前节点成为新的父节点继续递归，同时删去调用栈的第一层交付给下一层递归。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>rt.Nodes_Handler(&amp;pa_node.Children[i], stack_levels[1:len_], tmp_count, tmp_eventTpye) //递归构建下一层树
+</code></pre><h2 id="77-函数节点的统计中的问题">7.7. 函数节点的统计中的问题 </h2>
+<h3 id="771-total-计数中的问题">7.7.1. total 计数中的问题 </h3>
+<h4 id="a-funclist-出现重复的同名节点问题">A. funclist 出现重复的同名节点问题 </h4>
+<p><code>funclist</code> 是需要保证唯一性而创建的数据结构，其中的 FuncListNode 必须做到不存在同名的节点(即，同名的节点都已经正确合并)。而在最初实现后， <code>funclist</code> 出现重复的同名节点问题 ,经过调试后，发现是<code>funclist</code> 的<strong>循环跳出存在问题</strong>。</p>
+<p>具体问题是，在遍历 <code>funclist</code> 节点时，如果有同名的函数，则应直接在 <code>funclist</code> 节点上合并，合并后，应该直接进行下一层调用栈的处理，也就是接着遍历 <code>stack_levels</code> ，然而由于遍历结束后，若没有匹配的节点，则需要新建 <code>FuncListNode</code> 添加到 <code>funclist</code> 中，因此新建节点的代码要放在遍历 <code>funclist</code> 之后，这就导致了，最初的实现会存在函数已经在 <code>funclist</code> 中匹配合并了一次的同时，又进行了一次新建节点并添加的操作，最终导致 <code>funclist</code> 的唯一性被破坏。</p>
+<p>修改方式则是添加一个 <code>flag</code> ，用于在合并之后告知不需要新建节点或在不匹配之后告知需要新建节点。在下面的 <code>AddStack</code> 流程图中， <code>exit</code> 起到 <code>flag</code> 的作用:</p>
+<center>
+    <img src="image-exp\exp-AddStack.png" alt="/AddStack.png">
+</center>
+<h4 id="b-同一调用栈存在的函数同名问题">B. 同一调用栈存在的函数同名问题 </h4>
+<p>在运行有些测试时，会存在同一个栈出现大量的 <code>[unknown]</code> 函数，这部分是 symbol 缺失的情况，但是多个 <code>symbol</code> 缺失会导致 <code>[unknown]</code> 在栈上的重复。由于在用 <code>cycles</code> 占比计算 cpu 占用时间，跟 <code>perf report</code> 结果对比时，发现出入很大。经过仔细调试发现，是由于没有对同一栈的同名函数做处理导致的总 cycles 数量差异。</p>
+<p>因此在上一小节的 <code>AddStack</code> 流程图中，添加了 <code>last_name</code> ，用来避免同栈同名的重复计数问题。</p>
+<h3 id="772-self-计数中的问题">7.7.2. self 计数中的问题 </h3>
+<h4 id="a-遍历树节点计算-self-时修改了树结点的内容">A. 遍历树节点计算 self 时修改了树结点的内容 </h4>
+<p>在使用 total 计数结果的 cycles 事件计数计算不同函数的 cpu 占比后，发现了跟 <code>perf report</code> 的真实结果差别很大，这部分调试很难，因为已经实现了三个不同的文件，很难知道是哪里的问题。在逐一排查后，定位到了 self 计数的问题上，具体位置是 <code>iter_get_self</code> 函数。</p>
+<p>self 计数是需要遍历调用树的，存在递归调用的情况，因为调用树和树节点采用的是值传递引用，所以以为直接在节点上进行加减不会对原本的树产生影响，但是事实是，产生了影响。在屏蔽 self 计数后输出的树节点和添加了 self 计数后输出的树节点之间出现了明显的计数差异，推测是因为 self 计数时，父节点直接对所有子节点计数相减导致的。</p>
+<p>解决方法是，新建一个 CallTreeNode 复制当前节点的所有信息，再用新节点代替父节点去做减法，这样就可以避免对父节点的修改了。</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>func (fl *FuncList) iter_get_self(cTnode CallTreeNode) string {
+	var newNode CallTreeNode //新建复制才能解决父节点在self计算后计数丢失的问题
+	newNode.info.file = cTnode.info.file
+	newNode.info.symbolName = cTnode.info.symbolName
+	newNode.ev_count = make(map[string]int64)
+	for event, count := range cTnode.ev_count {
+		newNode.ev_count[event] = count
+	}
+......
+			for event, count := range child_node.ev_count {
+				newNode.ev_count[event] -= count//新建节点代替父节点相减
+			}
+......
+}
+</code></pre><h4 id="b-add_self-函数添加逻辑错误">B. Add_self 函数添加逻辑错误 </h4>
+<p>在 <code>iter_get_self</code> 将保有 self 计数的 node 传入 <code>Add_self</code> 后，一开始采用的是直接将新节点的所有计数添加到 funclist 节点中。但是这样实现后，返现 self 计数是对不上的。这是因为， CallTree 遍历时，一个函数可能会在不同的路径被遍历到数次，这就意味着不能在 funclist 中直接添加，而应该区分累和和直接添加，修复这个实现逻辑后，self 计数正常了。</p>
+<h3 id="773-topdown-计算中的问题">7.7.3. topdown 计算中的问题 </h3>
+<h4 id="a-存在负数以及和不为-1-的情况">A. 存在负数以及和不为 1 的情况 </h4>
+<p>在和指导老师交流之后得知，由于有些函数的样本量很少，所以出现负数以及和不为 1 的情况是比较合理的。可以对结果进行合理性检查，将负数的情况设置为无效的数据。</p>
+<h3 id="774-cycles-验证中的问题">7.7.4. cycles 验证中的问题 </h3>
+<h4 id="a-总-cycles-计算公式出错导致验证结果差别很大">A. 总 cycles 计算公式出错导致验证结果差别很大 </h4>
+<p>通过<strong>函数 A 的 cycles / 运行期间的 cycles</strong> 可以算出函数 A 的 cpu 占比，再将其与 <code>perf report</code> 的真实结果相比较，便可以辅助验证 <code>CallTree</code> 以及 <code>FuncList</code> 的构建的正确性。</p>
+<p>函数 A 的 <code>cycles</code> 分别是 <code>total</code> 和 <code>self</code> 计数。那么运行期间的 <code>cycles</code> 怎么算便很关键。</p>
+<p>在最初的设想中，总 <code>cycles</code> 分 <code>total</code> 和 <code>self</code> 两种，分别是所有函数的 <code>total cycles</code> 之和和所有函数的 <code>self cycles</code> 之和。乍看是符合逻辑的，但事实并不是这样。首先，如果计算所有函数的 <code>total cycles</code> ，那么意味着同一个栈上的 <code>cycles</code> 被重复计数了，也就是本来在 N 层调用栈里的 M 计数的 <code>cycles</code> ，被重复计数了 <code>N-1</code> 次。这样看来，真正的总 <code>cycles</code> 应该是 <code>CallTree</code> 里所有根函数的 <code>total cycles</code> 之和，或者 <code>FuncList</code> 中所有节点的 <code>self cycles</code> 之和。并且总 <code>cycles</code> 只有一个，并不区分 <code>total</code> 和 <code>self</code> 。</p>
+<h1 id="8分工与协作">8.分工与协作 </h1>
+<p>指导老师 常怀鑫：提供指导和实验环境、积极沟通进度</p>
+<p>队    长 董菁：负责了前期大部分的调研、中期所有的测试和工具实现以及后期所有文档的撰写</p>
+<p>队    员 石月鑫：由于需要忙实习，负责的任务较少，只负责了前期部分资料的调研</p>
+<h1 id="9提交仓库目录和文件描述">9.提交仓库目录和文件描述 </h1>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>.
+│  data_analysis.md            性能数据的计算结果和分析
+│  FalmeGraph.md               FlameGraph 调研文档
+│  function-level-topdown.md   调研 AMD topdown 计算公式的结果
+│  g7a-unixbench.md            g7a 单项测试结果，包含 perf 监测结果、FlameGraph、Topdown
+│  g8a-unixbench.md            g8a 单项测试结果，包含 perf 监测结果、FlameGraph、Topdown
+│  go.mod                      go的mod文件
+│  go.sum                      go的sum文件
+│  on-CPU.md                   topdown 调研文档
+│  perf.md                     perf 调研文档
+│  README.md                   主文档
+│  report.md                   实现报告文件
+│  UnixBench.md                UnixBench 调研文档
+│  
+├─.vscode
+│      launch.json
+│      
+├─code
+│      calltree.go             调用树生产器的 go 文件
+│      funclist.go             函数节点统计的 go 文件
+│      history_results.txt     保有历史输出结果的 txt 文件
+│      main.go                 终端 UI 的 go 文件
+│      perf.go                 perf 解析器的 go 文件
+│      perf.unfold             用来解析的 go 文件
+│      result.log              最新一次的 result.log
+│      
+├─data-analysis                性能数据图表文件夹
+│      FileCopy-unixbench.png
+│      FileCopy.png
+│      Pipe-based-Context-Switching.png
+│      Process-Creation-All-in-one.png
+│      Process-Creation-copy-process.png
+│      Process-Creation-exit_mm.png
+│      Process-Creation.png
+│      syscall-close.png
+│      syscall-exec.png
+│      syscall-getpid.png
+│      syscall-mix-with-sysenterfromusermode.png
+│      syscall-mix.png
+│      whetstone-double-MFLOPS.png
+│      whetstone-double-MOPS.png
+│      
+├─Flamegraph                  单项测试的 FlameGraph 文件夹
+│      g7a-context1-cpu0-1.svg
+│      g7a-context1-cpu0-3.svg
+│      g7a-context1-switch.svg
+│      g7a-context1.svg
+│      g7a-dhry2.svg
+│      g7a-dhry2reg.svg
+│      g7a-fstime.svg
+│      g7a-pipe.svg
+│      g7a-spawn.svg
+│      g7a-syscall-close.svg
+│      g7a-syscall-exec.svg
+│      g7a-syscall-getpid.svg
+│      g7a-syscall-mix.svg
+│      g7a-whetstone-double.svg
+│      g8a-context1-cpu0-1.svg
+│      g8a-context1-cpu0-3.svg
+│      g8a-context1.svg
+│      g8a-dhry2.svg
+│      g8a-dhry2reg.svg
+│      g8a-fstime.svg
+│      g8a-pipe.svg
+│      g8a-spawn.svg
+│      g8a-syscall-close.svg
+│      g8a-syscall-exec.svg
+│      g8a-syscall-getpid.svg
+│      g8a-syscall-mix.svg
+│      g8a-whetstone-double.svg
+│      
+├─image                      初赛阶段使用的图
+│      AMD-Fixed-Cost.png
+│      AMD-Topdown-Metrics.png
+│      AMD-Topdown.png
+│      eg-FlameGraph.png
+│      g7a-context1-1cpu-use.png
+│      g7a-context1-2cpu-use.png
+│      g7a-context1-4cpu-use.png
+│      g7a-context1-cpu0-1.png
+│      g7a-context1-cpu0-3.png
+│      g7a-context1.png
+│      g7a-dhry2.png
+│      g7a-dhry2reg.png
+│      g7a-fstime.png
+│      g7a-pipe.png
+│      g7a-spawn-cpu-use.png
+│      g7a-spawn.png
+│      g7a-syscall-close.png
+│      g7a-syscall-exec.png
+│      g7a-syscall-getpid.png
+│      g7a-syscall-mix.png
+│      g7a-whetstone-double.png
+│      g8a-context1-cpu0-1.png
+│      g8a-context1-cpu0-3.png
+│      g8a-context1.png
+│      g8a-dhry2.png
+│      g8a-dhry2reg.png
+│      g8a-fstime.png
+│      g8a-pipe.png
+│      g8a-spawn.png
+│      g8a-syscall-close.png
+│      g8a-syscall-exec.png
+│      g8a-syscall-getpid.png
+│      g8a-syscall-mix.png
+│      g8a-whetstone-double.png
+│      Intel-Topdown.png
+│      IntelCoffeeLake.png
+│      LeadingLoadModel.png
+│      linux-perf-events.png
+│      plan.png
+│      sampling.png
+│      simple_frame.png
+│      system-outline.png
+│      top_slip.png
+│      
+└─image-exp                  系统实现过程中的图
+        amd-pmu-1.png
+        amd-pmu-2.png
+        AMD-topdown-metrics.png
+        Backend-Bound-level2.png
+        Backend-Bound.png
+        Bad-Speculation-level2.png
+        Bad-Speculation.png
+        BB-Memory.png
+        BS-mispredicts.png
+        BS-Redirect.png
+        DECODER_EMPTY.png
+        exp-AddStack.png
+        exp-amdtopdown.png
+        exp-BuildTree.png
+        exp-calltree.png
+        exp-event.png
+        exp-funclist.png
+        exp-importfromperf.png
+        exp-iter_get_self.png
+        exp-main_ui.png
+        exp-Nodes_Handler.png
+        exp-parseEvent.png
+        exp-perf_event.png
+        exp-RootNodes_Handler.png
+        exp-sampling.png
+        exp-sys.png
+        exp-ui.png
+        exp-ui1.png
+        Frontend-Bound-level2.png
+        Frontend-Bound.png
+        Intel-implementation-of-TopDown-Metrics.png
+        intel-topdown-events.png
+        intel-topdown-formulas1.png
+        intel-topdown-formulas2.png
+        Ops-dispatched.png
+        Ret-microcode.png
+        Retired-ops.png
+        Retiring-level2.png
+        Retiring.png
+        Total-Slots.png
+        UNHALTED_REFERENCE_CYCLES.png
+        
+</code></pre><h1 id="10比赛收获">10.比赛收获 </h1>
+<ul>
+<li>学会了查找官方资料进行前期调研</li>
+<li>掌握了 Markdown 文档的撰写</li>
+<li>熟悉了 Linux 服务器的使用</li>
+<li>学到了常见的系统性能分析方法，如 topdown 分析方法</li>
+<li>掌握了系统性能工具的使用，如 perf、FlameGraph</li>
+<li>掌握了一些基准测试的使用，如 UnixBench</li>
+<li>学会了对记录的性能数据进行处理，并对结果进行分析</li>
+<li>掌握了 golang 语言，学会了使用 go 来开发</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
